@@ -34,12 +34,45 @@
   </head>
   <body>
     <main>
-      <h1>Impressum / Legal Notice</h1>
-      <p><strong>Responsible for content:</strong><br />Omid Rahimi<br />Deggendorf, Germany</p>
-      <p><strong>Email:</strong> <a href="mailto:omid.rahimirad@gmail.com">omid.rahimirad@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+4917648994467">+49 176 48994467</a></p>
-      <p>This portfolio is a personal website presenting professional experience, education, projects, and contact information.</p>
-      <p><a href="/">Back to portfolio</a></p>
+      <h1 data-i18n="title">Impressum / Legal Notice</h1>
+      <p><strong data-i18n="responsible">Responsible for content:</strong><br />Omid Rahimi<br /><span data-i18n="location">Deggendorf, Germany</span></p>
+      <p><strong data-i18n="emailLabel">Email:</strong> <a href="mailto:omid.rahimirad@gmail.com">omid.rahimirad@gmail.com</a></p>
+      <p><strong data-i18n="phoneLabel">Phone:</strong> <a href="tel:+4917648994467">+49 176 48994467</a></p>
+      <p data-i18n="description">This portfolio is a personal website presenting professional experience, education, projects, and contact information.</p>
+      <p><a href="/" data-i18n="back">Back to portfolio</a></p>
     </main>
+    <script>
+      const content = {
+        en: {
+          lang: 'en',
+          documentTitle: 'Impressum - Omid Rahimi',
+          title: 'Impressum / Legal Notice',
+          responsible: 'Responsible for content:',
+          location: 'Deggendorf, Germany',
+          emailLabel: 'Email:',
+          phoneLabel: 'Phone:',
+          description: 'This portfolio is a personal website presenting professional experience, education, projects, and contact information.',
+          back: 'Back to portfolio'
+        },
+        de: {
+          lang: 'de',
+          documentTitle: 'Impressum - Omid Rahimi',
+          title: 'Impressum',
+          responsible: 'Verantwortlich für den Inhalt:',
+          location: 'Deggendorf, Deutschland',
+          emailLabel: 'E-Mail:',
+          phoneLabel: 'Telefon:',
+          description: 'Dieses Portfolio ist eine persönliche Website mit beruflicher Erfahrung, Ausbildung, Projekten und Kontaktinformationen.',
+          back: 'Zurück zum Portfolio'
+        }
+      }
+
+      const language = content[localStorage.getItem('language')] ? localStorage.getItem('language') : 'en'
+      document.documentElement.lang = content[language].lang
+      document.title = content[language].documentTitle
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        element.textContent = content[language][element.dataset.i18n]
+      })
+    </script>
   </body>
 </html>

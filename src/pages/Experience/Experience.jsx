@@ -1,13 +1,12 @@
 import './Experience.css'
-import { experience } from '../../data/profile'
 
-const Experience = () => {
+const Experience = ({ t }) => {
   return (
     <div className="experience">
       <div className="container">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">{t.experience.title}</h2>
         <div className="experience-list">
-          {experience.map((item, index) => (
+          {t.experience.items.map((item, index) => (
             <article key={item.title} className={`experience-item animate-fadeIn delay-${index + 1}`}>
               <div className="experience-meta">
                 <span>{item.date}</span>

@@ -1,13 +1,12 @@
 import './Skills.css'
-import { skillGroups } from '../../data/profile'
 
-const Skills = () => {
+const Skills = ({ t }) => {
   return (
     <div className="skills">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
+        <h2 className="section-title">{t.skills.title}</h2>
         <div className="skill-groups">
-          {skillGroups.map((group) => (
+          {t.skills.groups.map((group) => (
             <article key={group.title} className="skill-group animate-fadeIn">
               <h3>{group.title}</h3>
               <ul>

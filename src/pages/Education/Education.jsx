@@ -1,13 +1,12 @@
 import './Education.css'
-import { education } from '../../data/profile'
 
-const Education = () => {
+const Education = ({ t }) => {
   return (
     <div className="education">
       <div className="container">
-        <h2 className="section-title">Education</h2>
+        <h2 className="section-title">{t.education.title}</h2>
         <div className="education-list">
-          {education.map((item) => (
+          {t.education.items.map((item) => (
             <article key={item.title} className="education-item animate-fadeIn">
               <span className="education-date">{item.date}</span>
               <h3>{item.title}</h3>

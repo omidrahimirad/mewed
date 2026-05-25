@@ -8,13 +8,28 @@ import Skills from './pages/Skills/Skills'
 import Education from './pages/Education/Education'
 import Certifications from './pages/Certifications/Certifications'
 import Contact from './pages/Contact/Contact'
+import { translations } from './data/translations'
 import './App.css'
+
+const getInitialLanguage = () => {
+  const savedLanguage = localStorage.getItem('language')
+  return savedLanguage && translations[savedLanguage] ? savedLanguage : 'en'
+}
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => (
     window.matchMedia('(prefers-color-scheme: dark)').matches
   ))
   const [activeSection, setActiveSection] = useState('home')
+  const [language, setLanguage] = useState(getInitialLanguage)
+  const t = translations[language]
+
+  useEffect(() => {
+    localStorage.setItem('language', language)
+    document.documentElement.lang = t.meta.lang
+    document.title = t.meta.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description)
+  }, [language, t])
 
   useEffect(() => {
     const sectionIds = ['home', 'experience', 'projects', 'skills', 'certifications', 'education', 'contact']
@@ -61,33 +76,36 @@ function App() {
         toggleTheme={toggleTheme} 
         activeSection={activeSection}
         handleNavigation={handleNavigation}
+        language={language}
+        setLanguage={setLanguage}
+        t={t}
       />
       
       <main>
         <section id="home">
-          <Home />
+          <Home t={t} />
         </section>
         <section id="experience">
-          <Experience />
+          <Experience t={t} />
         </section>
         <section id="projects">
-          <Projects />
+          <Projects t={t} />
         </section>
         <section id="skills">
-          <Skills />
+          <Skills t={t} />
         </section>
         <section id="certifications">
-          <Certifications />
+          <Certifications t={t} />
         </section>
         <section id="education">
-          <Education />
+          <Education t={t} />
         </section>
         <section id="contact">
-          <Contact />
+          <Contact t={t} language={language} />
         </section>
       </main>
       
-      <Footer />
+      <Footer t={t} />
     </div>
   )
 }

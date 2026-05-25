@@ -1,13 +1,12 @@
 import './Certifications.css'
-import { certifications } from '../../data/profile'
 
-const Certifications = () => {
+const Certifications = ({ t }) => {
   return (
     <div className="certifications">
       <div className="container">
-        <h2 className="section-title">Certifications & Awards</h2>
+        <h2 className="section-title">{t.certifications.title}</h2>
         <ul className="certification-list">
-          {certifications.map((item) => (
+          {t.certifications.items.map((item) => (
             <li key={item} className="certification-item animate-fadeIn">{item}</li>
           ))}
         </ul>

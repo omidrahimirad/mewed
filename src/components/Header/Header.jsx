@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import './Header.css'
 import { FaMoon, FaSun, FaBars, FaTimes, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { profile } from '../../data/profile'
+import { languageOptions } from '../../data/translations'
 
-const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation }) => {
+const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation, language, setLanguage, t }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -25,20 +26,20 @@ const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation }) => {
   }
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'certifications', label: 'Certifications' },
-    { id: 'education', label: 'Education' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: t.nav.home },
+    { id: 'experience', label: t.nav.experience },
+    { id: 'projects', label: t.nav.projects },
+    { id: 'skills', label: t.nav.skills },
+    { id: 'certifications', label: t.nav.certifications },
+    { id: 'education', label: t.nav.education },
+    { id: 'contact', label: t.nav.contact }
   ]
 
   const ctaLinks = [
-    { label: 'Download CV', href: profile.cv, icon: <FaFileDownload />, download: true },
-    { label: 'GitHub', href: profile.github, icon: <FaGithub /> },
-    { label: 'LinkedIn', href: profile.linkedin, icon: <FaLinkedin /> },
-    { label: 'Email', href: `mailto:${profile.email}`, icon: <FaEnvelope /> }
+    { label: t.common.downloadCv, href: profile.cv, icon: <FaFileDownload />, download: true },
+    { label: t.common.github, href: profile.github, icon: <FaGithub /> },
+    { label: t.common.linkedin, href: profile.linkedin, icon: <FaLinkedin /> },
+    { label: t.common.email, href: `mailto:${profile.email}`, icon: <FaEnvelope /> }
   ]
 
   return (
@@ -69,7 +70,20 @@ const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation }) => {
         </nav>
 
         <div className="header-actions">
-          <div className="header-cta" aria-label="Profile links">
+          <div className="language-switcher" role="group" aria-label={t.header.languageLabel}>
+            {languageOptions.map((option) => (
+              <button
+                key={option.code}
+                type="button"
+                className={`language-button ${language === option.code ? 'active' : ''}`}
+                onClick={() => setLanguage(option.code)}
+                aria-pressed={language === option.code}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+          <div className="header-cta" aria-label={t.header.profileLinks}>
             {ctaLinks.map((link) => (
               <a
                 key={link.label}
@@ -86,10 +100,10 @@ const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation }) => {
               </a>
             ))}
           </div>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle color theme">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={t.header.themeToggle}>
             {darkMode ? <FaSun className="theme-icon" /> : <FaMoon className="theme-icon" />}
           </button>
-          <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle navigation menu">
+          <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label={t.header.menuToggle}>
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>

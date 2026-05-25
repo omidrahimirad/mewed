@@ -2,14 +2,14 @@ import './Footer.css'
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa'
 import { profile } from '../../data/profile'
 
-const Footer = () => {
+const Footer = ({ t }) => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { label: 'GitHub', icon: <FaGithub />, url: profile.github },
-    { label: 'LinkedIn', icon: <FaLinkedin />, url: profile.linkedin },
-    { label: 'Email', icon: <FaEnvelope />, url: `mailto:${profile.email}` },
-    { label: 'Download CV', icon: <FaFileDownload />, url: profile.cv, download: true }
+    { label: t.common.github, icon: <FaGithub />, url: profile.github },
+    { label: t.common.linkedin, icon: <FaLinkedin />, url: profile.linkedin },
+    { label: t.common.email, icon: <FaEnvelope />, url: `mailto:${profile.email}` },
+    { label: t.common.downloadCv, icon: <FaFileDownload />, url: profile.cv, download: true }
   ]
 
   return (
@@ -32,9 +32,9 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <a className="footer-link" href="/impressum.html">Impressum / Legal Notice</a>
+          <a className="footer-link" href="/impressum.html">{t.footer.legal}</a>
           <p className="copyright">
-            &copy; {currentYear} {profile.name}. All rights reserved.
+            &copy; {currentYear} {profile.name}. {t.footer.copyright}
           </p>
         </div>
       </div>
