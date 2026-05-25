@@ -11,13 +11,10 @@ import Contact from './pages/Contact/Contact'
 import './App.css'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => (
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ))
   const [activeSection, setActiveSection] = useState('home')
-
-  useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    setDarkMode(prefersDark)
-  }, [])
 
   useEffect(() => {
     const sectionIds = ['home', 'experience', 'projects', 'skills', 'certifications', 'education', 'contact']
