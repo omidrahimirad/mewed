@@ -1,5 +1,7 @@
 import './Home.css'
 import avatar from '/avatar.PNG'
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { profile } from '../../data/profile'
 
 const Home = () => {
   return (
@@ -8,34 +10,40 @@ const Home = () => {
         <div className="home-content">
           <div className="home-text">
             <h1 className="animate-fadeIn">
-              Hi, I'm <span className="highlight">Omid Rahimi</span>
+              {profile.name} - <span className="highlight">{profile.headline}</span>
             </h1>
             <h2 className="animate-fadeIn delay-1">
-              <span className="typing">Wireless & AI-Driven Network Engineer | Automation & Optimization</span>
+              {profile.role}
             </h2>
             <p className="animate-fadeIn delay-2">
-              Results-driven Network and Systems Engineer with 9+ years of experience in 
-              wireless infrastructure (4G/5G, O-RAN), network performance optimization, and 
-              automation. Skilled in Python, Kubernetes, and Linux-based scripting, with 
-              proven success applying AI/ML to optimize telecom networks, analyze RF systems, 
-              and enhance connectivity performance. Combines deep telecom expertise with 
-              advanced data-driven methodologies to deliver scalable, high-performance solutions 
-              for next-generation networks.
+              With over nine years in systems integration, testing, and RF performance analysis across
+              4G/5G RAN and cloud-native 5G testbeds, I specialize in KPI-driven diagnostics,
+              reproducible validation workflows, and automation with Linux and Python. My recent work
+              at Deggendorf University of Applied Sciences focuses on Kubernetes-based 5G test
+              environments, O-RAN components, and RF material characterization using machine learning.
+            </p>
+            <p className="target-roles animate-fadeIn delay-2">
+              <strong>Looking for roles:</strong> {profile.targetRoles.join(' · ')}
             </p>
             <div className="home-actions animate-fadeIn delay-3">
-              <a href="#contact" className="btn btn-primary">
-                Contact Me
+              <a href={profile.cv} className="btn btn-primary" download>
+                <FaDownload /> Download CV
               </a>
-              <a href="#projects" className="btn btn-outline">
-                View Projects
+              <a href={profile.github} className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <FaGithub /> GitHub
+              </a>
+              <a href={profile.linkedin} className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin /> LinkedIn
+              </a>
+              <a href={`mailto:${profile.email}`} className="btn btn-outline">
+                <FaEnvelope /> Email
               </a>
             </div>
           </div>
           <div className="home-image">
             <div className="image-wrapper animate-fadeIn delay-1">
-              <img src={avatar} alt="Profile" className="profile-image animate-float" />
+              <img src={avatar} alt="Omid Rahimi profile portrait" className="profile-image animate-float" />
               <div className="image-border"></div>
-              <div className="image-dots"></div>
             </div>
           </div>
         </div>

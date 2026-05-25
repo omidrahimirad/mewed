@@ -1,6 +1,7 @@
 import './Contact.css'
-import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa'
+import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa'
 import { useState } from 'react'
+import { profile } from '../../data/profile'
 
 const Contact = () => {
   const [status, setStatus] = useState('idle')
@@ -42,12 +43,35 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
         <div className="contact-content">
-          {/* left column unchanged – your info */}
           <div className="contact-info">
-            {/* ... your Location / Email / Phone / LinkedIn blocks ... */}
+            <div className="contact-item animate-fadeIn">
+              <div className="contact-icon"><FaEnvelope /></div>
+              <div className="contact-text">
+                <h3>Email</h3>
+                <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+              </div>
+            </div>
+            <div className="contact-item animate-fadeIn delay-1">
+              <div className="contact-icon"><FaPhone /></div>
+              <div className="contact-text">
+                <h3>Phone</h3>
+                <p><a href={`tel:${profile.phone.replace(/\s/g, '')}`}>{profile.phone}</a></p>
+              </div>
+            </div>
+            <div className="contact-item animate-fadeIn delay-2">
+              <div className="contact-icon"><FaMapMarkerAlt /></div>
+              <div className="contact-text">
+                <h3>Location</h3>
+                <p>{profile.location}</p>
+              </div>
+            </div>
+            <div className="contact-links animate-fadeIn delay-3">
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /> LinkedIn</a>
+              <a href={profile.github} target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
+              <a href={profile.cv} download><FaFileDownload /> Download CV</a>
+            </div>
           </div>
 
-          {/* Netlify-enabled form */}
           <form
             name="contact"
             data-netlify="true"
@@ -55,23 +79,26 @@ const Contact = () => {
             className="contact-form animate-fadeIn delay-4"
             onSubmit={handleSubmit}
           >
-            {/* required for Netlify forms */}
             <input type="hidden" name="form-name" value="contact" />
             <p style={{ display: 'none' }}>
               <label>Don’t fill this out: <input name="bot-field" /></label>
             </p>
 
             <div className="form-group">
-              <input type="text" name="name" placeholder="Your Name" required />
+              <label htmlFor="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" required />
             </div>
             <div className="form-group">
-              <input type="email" name="email" placeholder="Your Email" required />
+              <label htmlFor="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="your.email@company.com" required />
             </div>
             <div className="form-group">
-              <input type="text" name="subject" placeholder="Subject" />
+              <label htmlFor="subject">Subject</label>
+              <input id="subject" type="text" name="subject" placeholder="Role, collaboration, or project question" />
             </div>
             <div className="form-group">
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can I help?" rows="5" required></textarea>
             </div>
 
             <button type="submit" className="btn btn-primary" disabled={status === 'submitting'}>
