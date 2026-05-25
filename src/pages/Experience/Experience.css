@@ -1,16 +1,83 @@
 .experience {
-    padding: 5rem 0;
+  padding: 5rem 0;
+}
+
+.experience-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  background-color: var(--light-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px var(--light-card-shadow);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(170px, 0.34fr) 1fr;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.dark .experience-item {
+  background-color: var(--dark-card);
+  box-shadow: 0 5px 15px var(--dark-card-shadow);
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+}
+
+.experience-meta span {
+  color: var(--light-accent);
+  display: inline-block;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.dark .experience-meta span {
+  color: var(--dark-accent);
+}
+
+.experience-body h3 {
+  color: var(--light-primary);
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.dark .experience-body h3 {
+  color: var(--dark-primary);
+}
+
+.experience-body h4 {
+  color: var(--light-text-secondary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.dark .experience-body h4 {
+  color: var(--dark-text-secondary);
+}
+
+.experience-body ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.experience-body li {
+  color: var(--light-text);
+  margin-bottom: 0.55rem;
+}
+
+.dark .experience-body li {
+  color: var(--dark-text);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 3rem 0;
   }
-  
-  .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
+
+  .experience-item {
+    grid-template-columns: 1fr;
   }
-  
-  @media (max-width: 768px) {
-    .experience {
-      padding: 3rem 0;
-    }
-  }
+}

@@ -6,6 +6,7 @@ import Experience from './pages/Experience/Experience'
 import Projects from './pages/Projects/Projects'
 import Skills from './pages/Skills/Skills'
 import Education from './pages/Education/Education'
+import Certifications from './pages/Certifications/Certifications'
 import Contact from './pages/Contact/Contact'
 import './App.css'
 
@@ -16,6 +17,32 @@ function App() {
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     setDarkMode(prefersDark)
+  }, [])
+
+  useEffect(() => {
+    const sectionIds = ['home', 'experience', 'projects', 'skills', 'certifications', 'education', 'contact']
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visibleSection?.target?.id) {
+          setActiveSection(visibleSection.target.id)
+        }
+      },
+      {
+        rootMargin: '-25% 0px -55% 0px',
+        threshold: [0.2, 0.4, 0.6]
+      }
+    )
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    })
+
+    return () => observer.disconnect()
   }, [])
 
   const toggleTheme = () => {
@@ -51,6 +78,9 @@ function App() {
         </section>
         <section id="skills">
           <Skills />
+        </section>
+        <section id="certifications">
+          <Certifications />
         </section>
         <section id="education">
           <Education />

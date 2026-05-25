@@ -1,41 +1,21 @@
 import './Education.css'
-import TimelineItem from '../../components/TimelineItem/TimelineItem'
+import { education } from '../../data/profile'
 
 const Education = () => {
-  const education = [
-    {
-      date: 'Mar 2023 – 2025',
-      title: 'M.Sc. Electrical Engineering & Information Technology (Automation)',
-      subtitle: 'Deggendorf University of Applied Sciences, Germany',
-      description: `Focus on intelligent systems, network management, and data-driven optimization. 
-      Master's thesis: RF Material Characterization Using AI, developed machine learning and symbolic 
-      modeling workflows to predict RF material permittivity from impedance spectroscopy data.`
-    },
-    {
-      date: 'Sep 2008 – 2012',
-      title: 'B.Sc. Electrical Engineering (Electronics)',
-      subtitle: 'Ferdowsi University of Mashhad, Iran',
-      description: `Specialized in electronics, communication systems, and signal processing. 
-      Bachelor's thesis: Analysis and simulation of CDMA spreading codes to reduce multiple access 
-      interference and improve signal quality.`,
-      last: true
-    }
-  ]
-
   return (
     <div className="education">
       <div className="container">
         <h2 className="section-title">Education</h2>
-        <div className="timeline">
-          {education.map((edu, index) => (
-            <TimelineItem
-              key={index}
-              date={edu.date}
-              title={edu.title}
-              subtitle={edu.subtitle}
-              description={edu.description}
-              last={edu.last}
-            />
+        <div className="education-list">
+          {education.map((item) => (
+            <article key={item.title} className="education-item animate-fadeIn">
+              <span className="education-date">{item.date}</span>
+              <h3>{item.title}</h3>
+              <h4>{item.school}</h4>
+              {item.details.map((detail) => (
+                <p key={detail}>{detail}</p>
+              ))}
+            </article>
           ))}
         </div>
       </div>
