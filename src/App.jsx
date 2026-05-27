@@ -83,7 +83,7 @@ function App() {
       
       <main>
         <section id="home">
-          <Home t={t} />
+          <Home t={t} language={language} />
         </section>
         <section id="experience">
           <Experience t={t} />
@@ -105,7 +105,7 @@ function App() {
         </section>
       </main>
       
-      <Footer t={t} />
+      <Footer t={t} language={language} />
     </div>
   )
 }

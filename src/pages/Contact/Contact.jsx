@@ -1,7 +1,7 @@
 import './Contact.css'
 import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa'
 import { useState } from 'react'
-import { profile } from '../../data/profile'
+import { getCvUrl, profile } from '../../data/profile'
 
 const Contact = ({ t, language }) => {
   const [status, setStatus] = useState('idle')
@@ -68,7 +68,7 @@ const Contact = ({ t, language }) => {
             <div className="contact-links animate-fadeIn delay-3">
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /> {t.common.linkedin}</a>
               <a href={profile.github} target="_blank" rel="noopener noreferrer"><FaGithub /> {t.common.github}</a>
-              <a href={profile.cv} download><FaFileDownload /> {t.common.downloadCv}</a>
+              <a href={getCvUrl(language)} download><FaFileDownload /> {t.common.downloadCv}</a>
             </div>
           </div>
 

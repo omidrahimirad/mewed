@@ -1,15 +1,15 @@
 import './Footer.css'
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa'
-import { profile } from '../../data/profile'
+import { getCvUrl, profile } from '../../data/profile'
 
-const Footer = ({ t }) => {
+const Footer = ({ t, language }) => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
     { label: t.common.github, icon: <FaGithub />, url: profile.github },
     { label: t.common.linkedin, icon: <FaLinkedin />, url: profile.linkedin },
     { label: t.common.email, icon: <FaEnvelope />, url: `mailto:${profile.email}` },
-    { label: t.common.downloadCv, icon: <FaFileDownload />, url: profile.cv, download: true }
+    { label: t.common.downloadCv, icon: <FaFileDownload />, url: getCvUrl(language), download: true }
   ]
 
   return (

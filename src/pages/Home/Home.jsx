@@ -1,9 +1,9 @@
 import './Home.css'
 import avatar from '/avatar.PNG'
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { profile } from '../../data/profile'
+import { getCvUrl, profile } from '../../data/profile'
 
-const Home = ({ t }) => {
+const Home = ({ t, language }) => {
   const [headlineName, headlineRole] = t.hero.headline.split(/\s[–-]\s/)
 
   return (
@@ -24,7 +24,7 @@ const Home = ({ t }) => {
               <strong>{t.hero.targetLabel}</strong> {t.hero.targetRoles.join(' · ')}
             </p>
             <div className="home-actions animate-fadeIn delay-3">
-              <a href={profile.cv} className="btn btn-primary" download>
+              <a href={getCvUrl(language)} className="btn btn-primary" download>
                 <FaDownload /> {t.common.downloadCv}
               </a>
               <a href={profile.github} className="btn btn-outline" target="_blank" rel="noopener noreferrer">

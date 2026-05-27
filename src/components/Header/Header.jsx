@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Header.css'
 import { FaMoon, FaSun, FaBars, FaTimes, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
-import { profile } from '../../data/profile'
+import { getCvUrl, profile } from '../../data/profile'
 import { languageOptions } from '../../data/translations'
 
 const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation, language, setLanguage, t }) => {
@@ -36,7 +36,7 @@ const Header = ({ darkMode, toggleTheme, activeSection, handleNavigation, langua
   ]
 
   const ctaLinks = [
-    { label: t.common.downloadCv, href: profile.cv, icon: <FaFileDownload />, download: true },
+    { label: t.common.downloadCv, href: getCvUrl(language), icon: <FaFileDownload />, download: true },
     { label: t.common.github, href: profile.github, icon: <FaGithub /> },
     { label: t.common.linkedin, href: profile.linkedin, icon: <FaLinkedin /> },
     { label: t.common.email, href: `mailto:${profile.email}`, icon: <FaEnvelope /> }
