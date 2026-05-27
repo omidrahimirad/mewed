@@ -7,8 +7,8 @@ export const translations = {
   en: {
     meta: {
       lang: 'en',
-      title: 'Omid Rahimi - Systems Integration & Wireless Engineer Portfolio',
-      description: 'Portfolio of Omid Rahimi, a systems integration and wireless engineer with 9+ years of experience integrating, validating, and optimizing 4G/5G/O-RAN networks, deploying cloud-native 5G testbeds, and applying machine learning to RF systems.'
+      title: 'Omid Rahimi - Systems Integration, Test & RF Performance Portfolio',
+      description: 'Portfolio of Omid Rahimi, an engineer with 9+ years of experience in systems integration, testing, RF performance analysis, KPI-driven diagnostics, configuration validation, and Linux/Python automation across 4G/5G RAN and cloud-native 5G test environments.'
     },
     common: {
       downloadCv: 'Download CV',
@@ -32,14 +32,15 @@ export const translations = {
       menuToggle: 'Toggle navigation menu'
     },
     hero: {
-      headline: 'Omid Rahimi – Systems Integration & Wireless Engineer',
-      subheadline: 'Systems Integration, Test & RF Performance Engineer',
-      summary: 'With over nine years integrating and validating 4G/5G/O-RAN networks for Huawei and ZTE, I specialise in end-to-end system integration, KPI-driven performance analysis and cloud-native testbed deployment. I recently designed and operated a 5G test environment using Kubernetes and O-RAN components as part of my master’s studies at Deggendorf University of Applied Sciences, and my thesis applies machine learning to RF material characterization.',
-      targetLabel: 'Looking for roles:',
+      headline: 'Omid Rahimi – Systems Integration, Test & RF Performance Engineer',
+      subheadline: '4G/5G RAN · Cloud-Native Test Environments · KPI-Driven Diagnostics',
+      summary: 'Engineer with 9+ years of experience in systems integration, testing, and RF performance analysis across 4G/5G RAN and cloud-native 5G test environments. Strong background in KPI-driven diagnostics, reproducible test workflows, configuration validation, and automation using Linux/Python. Based in Germany with full-time work authorization, available at short notice, and open to relocation within Germany.',
+      targetLabel: 'Professional focus:',
       targetRoles: [
-        'Systems Integration & Test Engineer',
-        'Network Infrastructure Engineer',
-        'RF Measurement & Validation Engineer'
+        'Systems Integration & Validation',
+        'Test & Validation',
+        'RF Performance Analysis',
+        'RAN Operations & Optimization'
       ],
       portraitAlt: 'Omid Rahimi profile portrait'
     },
@@ -47,45 +48,36 @@ export const translations = {
       title: 'Experience',
       items: [
         {
-          title: 'Research Engineer - 5G Systems & RF Technology',
-          company: 'Deggendorf University of Applied Sciences (THD), Germany',
-          date: 'December 2024 - March 2026',
-          bullets: [
-            'Designed and operated a cloud-native 5G test environment using Kubernetes and O-RAN components for system-level performance evaluation.',
-            'Simulated multi-user scenarios with 100+ users to analyze throughput, latency, and system behavior under load.',
-            'Performed end-to-end system validation by correlating RF measurements with network KPIs to understand cross-layer effects.',
-            'Structured automated test workflows and logs for reproducible system testing and analysis.'
-          ]
-        },
-        {
-          title: 'Wireless Systems Engineer - RAN Integration & Optimisation',
-          company: 'Contracted via FPR Co. / Delta Ertebatat Iranian, Tehran, Iran (Huawei RAN Project)',
+          title: 'Wireless (RAN) Engineer - RAN Operations & Optimization',
+          company: 'Contracted via FPR Co. / Delta Ertebatat Iranian for Huawei RAN projects, Tehran, Iran',
           date: 'July 2016 - March 2023',
           bullets: [
-            'Validated and integrated large-scale distributed RAN systems across network components and interfaces.',
-            'Performed root-cause analysis of system-level issues across RRC, NAS, MAC, and PHY layers.',
-            'Executed 50+ live system upgrades and configuration changes while maintaining service continuity.',
-            'Verified 400+ configuration changes against design parameters to prevent production misconfigurations.',
-            'Analyzed throughput, latency, reliability, and other KPIs to identify bottlenecks and improve stability.'
+            'Supported deployment, configuration, optimization, and troubleshooting of large-scale LTE and early 5G RAN infrastructure in live mobile network environments.',
+            'Performed KPI-based fault analysis using RSRP, SINR, BLER, throughput, latency, handover success rate, accessibility, and retainability.',
+            'Conducted cross-layer root cause analysis across RRC, NAS, MAC, and PHY to link protocol behavior with RAN performance degradation.',
+            'Executed 50+ live software upgrades and license activations, including change-window support, post-upgrade validation, and service-continuity checks.',
+            'Verified and validated 400+ RAN configuration changes against design parameters and operational requirements to reduce production misconfiguration risk.'
           ]
         },
         {
-          title: 'BSC/RNC Technical Engineer - Nationwide Network Modernisation',
-          company: 'Iran Ofogh Industrial Development Co. / ZTE Parsian, Tehran, Iran',
+          title: 'Wireless Network Modernization Engineer - ZTE Parsian Modernization Project',
+          company: 'Employed by Iran Ofogh Industrial Development Co.; assigned to ZTE Parsian, Tehran, Iran',
           date: 'May 2015 - July 2016',
           bullets: [
-            'Integrated 900+ network nodes into existing infrastructure while maintaining system compatibility and stable operation.',
-            'Performed configuration and parameter tuning during large-scale modernization work.',
-            'Supported infrastructure transition from legacy systems to 4G environments.'
+            'Integrated 900+ BTS/network nodes during large-scale mobile network modernization projects, ensuring compatibility with existing infrastructure and stable post-rollout operation.',
+            'Performed radio configuration, parameter tuning, and frequency-planning support during network expansion and modernization activities.',
+            'Validated system behavior after configuration and parameter updates using monitoring data, alarms, and performance indicators.',
+            'Supported migration from legacy network environments toward 4G infrastructure while maintaining operational stability during rollout phases.'
           ]
         },
         {
-          title: 'Network Operations Engineer - System Monitoring & Incident Support',
-          company: 'SGS Iran (Huawei Technologies Service Project), Tehran, Iran',
+          title: 'RAN Front Office Engineer - Huawei Technologies Service Project',
+          company: 'Employed by SGS Iran for Huawei RAN projects, Tehran, Iran',
           date: 'March 2013 - March 2015',
           bullets: [
-            'Monitored system health and performance using alarms and KPI trends to identify early-stage issues.',
-            'Supported incident handling workflows and operational procedures for sustained system stability.'
+            'Monitored RAN system health, availability, alarms, and traffic behavior in a NOC-style operational environment.',
+            'Produced daily and weekly KPI reports and performed first-level troubleshooting for access, mobility, capacity, and service-quality issues.',
+            'Maintained shift logs, incident records, and operational procedures to support consistent escalation and troubleshooting workflows.'
           ]
         }
       ]
@@ -102,25 +94,25 @@ export const translations = {
         {
           title: 'ML-Based Link Capacity Estimation in 4G/5G Networks',
           year: '2024',
-          objective: 'Estimate system throughput from real KPI data and identify the strongest capacity drivers across wireless deployments.',
-          methods: 'Built XGBoost and Random Forest models, performed feature analysis, and used SHAP to interpret throughput behavior.',
-          results: 'Produced a data-driven workflow for network optimization and clearer prioritization of performance bottlenecks.',
+          objective: 'Support KPI-driven optimization by estimating capacity and throughput behavior from telecom performance data.',
+          methods: 'Used Python-based KPI analysis, throughput modelling, feature analysis, SHAP, and machine-learning workflows for telecom data.',
+          results: 'Built an analysis approach that helps connect network KPIs with capacity drivers and performance degradation patterns.',
           link: 'https://github.com/omidrahimirad'
         },
         {
           title: '5G Test System - Cloud-Native Simulation Environment',
           year: '2024',
-          objective: 'Create a reproducible 5G system test environment for cloud-native RAN/core validation.',
-          methods: 'Deployed a complete simulation stack using Kubernetes, Docker, Linux, and O-RAN components.',
-          results: 'Automated scenario execution and analyzed stability, throughput, and latency profiles under varying loads.',
+          objective: 'Evaluate 5G test environments at system level using reproducible cloud-native test workflows.',
+          methods: 'Built and analyzed Kubernetes/O-RAN-based 5G test scenarios, including multi-user performance evaluation.',
+          results: 'Analyzed throughput and latency behavior using KPI-based evaluation in Linux-based test environments.',
           link: 'https://github.com/omidrahimirad'
         },
         {
           title: 'RF Material Characterization Using Machine Learning',
           year: '2025',
-          objective: 'Predict dielectric properties for RF and microwave applications from experimental measurement data.',
-          methods: 'Prepared impedance spectroscopy data and developed machine-learning and symbolic-regression workflows.',
-          results: 'Supported faster RF material evaluation by connecting measurement features with permittivity prediction.',
+          objective: 'Characterize permittivity for RF and microwave applications using experimental measurement and AI-based prediction.',
+          methods: 'Worked with RF measurement analysis, AI-based material characterization, and machine-learning workflows.',
+          results: 'Connected experimental RF measurement data with AI-based prediction methods for material characterization.',
           link: null
         }
       ]
@@ -129,32 +121,61 @@ export const translations = {
       title: 'Skills',
       groups: [
         {
-          title: 'Wireless & Systems',
+          title: 'Systems Integration & Validation',
           items: [
-            '4G/5G RAN integration & optimization',
-            'O-RAN architecture and cloud-native 5G testbeds',
-            'RF measurement & signal analysis',
-            'KPI analysis and root-cause troubleshooting across RRC/NAS/MAC/PHY',
-            'System integration, interface verification, and configuration validation'
+            'End-to-end validation',
+            'Configuration verification and post-change validation',
+            'Performance testing and load testing',
+            'Root cause analysis',
+            'RAN configuration validation across live network environments'
           ]
         },
         {
-          title: 'Programming & Data',
+          title: 'Telecom & 3GPP Systems',
+          items: [
+            'LTE, 5G NR, and RAN architecture',
+            'RRC, NAS, MAC, and PHY layer analysis',
+            'RAN integration and OSS/NMS monitoring',
+            'KPI-based troubleshooting with RSRP, SINR, BLER, throughput, latency, accessibility, and retainability'
+          ]
+        },
+        {
+          title: 'Software, Data & Automation',
           items: [
             'Python (pandas, scikit-learn, NumPy)',
             'SQL',
             'Power BI',
+            'Git and Linux',
             'Jupyter',
-            'SHAP-based feature analysis'
+            'Python-based KPI analysis'
           ]
         },
         {
-          title: 'DevOps & Tools',
+          title: 'Automation & PLC Fundamentals',
+          items: [
+            'PLC basics',
+            'Siemens TIA Portal',
+            'Control logic and timers',
+            'Sensor/actuator concepts',
+            'Automation coursework'
+          ]
+        },
+        {
+          title: 'Cloud-Native & Test Platforms',
           items: [
             'Kubernetes, Docker, Linux',
-            'Git',
-            'Automated test workflows',
-            'OSS/NMS alarm diagnostics'
+            'O-RAN components',
+            'Linux-based test environments',
+            'Reproducible test workflows'
+          ]
+        },
+        {
+          title: 'AI/ML for Telecom',
+          items: [
+            'Capacity prediction',
+            'Throughput modelling',
+            'SHAP and feature analysis',
+            'KPI-driven optimization support'
           ]
         },
         {
@@ -195,10 +216,11 @@ export const translations = {
         {
           title: 'M.Sc. Electrical Engineering & Information Technology (Automation)',
           school: 'Deggendorf University of Applied Sciences (THD), Germany',
-          date: 'March 2023 - March 2026',
+          date: 'March 2023 - 2026',
           details: [
             'Master thesis: Permittivity Characterization for RF and Microwave Applications: Experimental Measurement and AI-Based Prediction.',
-            'Relevant focus areas: control systems, embedded signal processing, data science for engineers, cloud-native 5G systems, and RF measurement.'
+            'Academic and research work includes RF measurement analysis, AI-based material characterization, and system-level evaluation of 5G test environments.',
+            'Built and analyzed Kubernetes/O-RAN-based 5G test scenarios, including multi-user performance evaluation and KPI-based throughput/latency analysis.'
           ]
         },
         {
@@ -241,8 +263,8 @@ export const translations = {
   de: {
     meta: {
       lang: 'de',
-      title: 'Omid Rahimi - Ingenieur für Systemintegration & Wireless-Technologien',
-      description: 'Portfolio von Omid Rahimi, Ingenieur für Systemintegration und Wireless-Technologien mit über neun Jahren Erfahrung in der Integration, Validierung und Optimierung von 4G/5G- und O-RAN-Systemen, cloud-nativen 5G-Testumgebungen und KI-gestützter HF-Materialcharakterisierung.'
+      title: 'Omid Rahimi - Systemintegration, Test & HF-Performance',
+      description: 'Portfolio von Omid Rahimi, Ingenieur mit über 9 Jahren Erfahrung in Systemintegration, Test, HF-/Performance-Analyse, KPI-basierter Diagnostik, Konfigurationsvalidierung und Automatisierung mit Linux/Python in 4G/5G-RAN- und cloud-nativen 5G-Testumgebungen.'
     },
     common: {
       downloadCv: 'Lebenslauf herunterladen',
@@ -266,14 +288,15 @@ export const translations = {
       menuToggle: 'Navigationsmenü öffnen oder schließen'
     },
     hero: {
-      headline: 'Omid Rahimi – Ingenieur für Systemintegration & Wireless-Technologien',
-      subheadline: 'Systemintegration, Test & HF-Performance',
-      summary: 'Ich bringe über neun Jahre Erfahrung in der Integration, Validierung und Optimierung von 4G/5G- und O-RAN-Systemen aus Projekten mit Huawei und ZTE mit. Mein Schwerpunkt liegt auf End-to-End-Systemintegration, KPI-basierter Performance-Analyse und cloud-nativen 5G-Testumgebungen. Im Rahmen meines Masterstudiums an der Technischen Hochschule Deggendorf habe ich eine 5G-Testumgebung mit Kubernetes und O-RAN-Komponenten aufgebaut und betrieben. Meine Masterarbeit beschäftigt sich mit KI-gestützter HF-Materialcharakterisierung.',
-      targetLabel: 'Zielpositionen:',
+      headline: 'Omid Rahimi – Systemintegration, Test & HF-Performance',
+      subheadline: '4G/5G-RAN · Cloud-native Testumgebungen · KPI-basierte Diagnostik',
+      summary: 'Ingenieur mit über 9 Jahren Erfahrung in Systemintegration, Test und HF-/Performance-Analyse in 4G/5G-RAN- und cloud-nativen 5G-Testumgebungen. Fundierte Erfahrung in KPI-basierter Diagnostik, reproduzierbaren Testabläufen, Konfigurationsvalidierung und Automatisierung mit Linux/Python. Wohnhaft in Deutschland, Vollzeit arbeitserlaubt, kurzfristig verfügbar und umzugsbereit innerhalb Deutschlands.',
+      targetLabel: 'Fachlicher Fokus:',
       targetRoles: [
-        'Ingenieur für Systemintegration & Test',
-        'Ingenieur für Netzwerkinfrastruktur',
-        'Ingenieur für HF-Messtechnik & Validierung'
+        'Systemintegration & Validierung',
+        'Test & Validierung',
+        'HF-/Performance-Analyse',
+        'RAN-Betrieb & Optimierung'
       ],
       portraitAlt: 'Profilfoto von Omid Rahimi'
     },
@@ -281,45 +304,37 @@ export const translations = {
       title: 'Berufserfahrung',
       items: [
         {
-          title: 'Research Engineer - 5G-Systeme & HF-Technologie',
-          company: 'Technische Hochschule Deggendorf (THD), Deutschland',
-          date: 'Dezember 2024 - März 2026',
-          bullets: [
-            'Aufbau und Betrieb einer cloud-nativen 5G-Testumgebung mit Kubernetes und O-RAN-Komponenten für systemnahe Performance-Bewertungen.',
-            'Simulation von Mehrbenutzer-Szenarien mit über 100 Nutzern zur Analyse von Durchsatz, Latenz und Systemverhalten unter Last.',
-            'End-to-End-Systemvalidierung durch Korrelation von HF-Messungen mit Netzwerk-KPIs zur Bewertung von Wechselwirkungen über mehrere Systemebenen.',
-            'Strukturierung automatisierter Testabläufe und Logs für reproduzierbare Systemtests und Analysen.'
-          ]
-        },
-        {
-          title: 'Wireless Systems Engineer - RAN-Integration & Optimierung',
-          company: 'Beauftragt über FPR Co. / Delta Ertebatat Iranian, Teheran, Iran (Huawei RAN Project)',
+          title: 'Wireless-RAN-Ingenieur - RAN-Betrieb und -Optimierung',
+          company: 'Beauftragt über FPR Co. / Delta Ertebatat Iranian für Huawei RAN-Projekte, Teheran, Iran',
           date: 'Juli 2016 - März 2023',
           bullets: [
-            'Validierung und Integration großer verteilter RAN-Systeme über Netzwerkkomponenten und Schnittstellen hinweg.',
-            'Fehler- und Ursachenanalyse systemweiter Probleme über die Protokollebenen RRC, NAS, MAC und PHY.',
-            'Durchführung von mehr als 50 Live-Systemupgrades und Konfigurationsänderungen bei laufendem Betrieb.',
-            'Prüfung von mehr als 400 Konfigurationsänderungen gegen Designvorgaben zur Vermeidung von Fehlkonfigurationen in Produktionssystemen.',
-            'Analyse von Durchsatz, Latenz, Zuverlässigkeit und weiteren KPIs zur Identifikation von Engpässen und Stabilitätsverbesserungen.'
+            'Unterstützte Bereitstellung, Konfiguration, Optimierung und Fehlerbehebung großflächiger LTE- und früher 5G-RAN-Infrastrukturen in produktiven Mobilfunknetzen.',
+            'Führte KPI-basierte Fehleranalysen anhand von RSRP, SINR, BLER, Durchsatz, Latenz, Handover-Erfolgsrate, Accessibility und Retainability durch.',
+            'Analysierte Ursachen von Performance-Degradationen schichtübergreifend über RRC, NAS, MAC und PHY.',
+            'Führte mehr als 50 Live-Software-Upgrades und Lizenzaktivierungen durch, inklusive Change-Window-Unterstützung, Post-Upgrade-Validierung und Service-Continuity-Checks.',
+            'Verifizierte und validierte über 400 RAN-Konfigurationsänderungen anhand von Designparametern und Betriebsanforderungen, um Fehlkonfigurationen im Produktivnetz zu reduzieren.'
           ]
         },
         {
-          title: 'BSC/RNC Technical Engineer - Landesweite Netzmodernisierung',
-          company: 'Iran Ofogh Industrial Development Co. / ZTE Parsian, Teheran, Iran',
+          title: 'Ingenieur für die Modernisierung drahtloser Netzwerke - ZTE Parsian Modernisierungsprojekt',
+          company: 'Angestellt bei Iran Ofogh Industrial Development Co.; eingesetzt bei ZTE Parsian, Teheran, Iran',
           date: 'Mai 2015 - Juli 2016',
           bullets: [
-            'Integration von mehr als 900 Netzwerkknoten in bestehende Infrastrukturen unter Berücksichtigung von Systemkompatibilität und stabilem Betrieb.',
-            'Durchführung von Konfigurations- und Parametereinstellungen im Rahmen groß angelegter Modernisierungsmaßnahmen.',
-            'Unterstützung der Infrastrukturumstellung von Legacy-Systemen auf 4G-Umgebungen.'
+            'Integrierte über 900 BTS-/Netzwerkknoten im Rahmen großflächiger Mobilfunknetz-Modernisierungsprojekte.',
+            'Sicherte die Kompatibilität mit bestehender Infrastruktur und einen stabilen Betrieb nach dem Rollout.',
+            'Unterstützte Funkkonfiguration, Parameteroptimierung und Frequenzplanung während Netzwerk-Erweiterungs- und Modernisierungsmaßnahmen.',
+            'Validierte das Systemverhalten nach Konfigurations- und Parameteränderungen anhand von Monitoring-Daten, Alarmen und Performance-Indikatoren.',
+            'Unterstützte die Migration von Legacy-Netzwerkumgebungen in Richtung 4G-Infrastruktur bei gleichzeitiger Aufrechterhaltung der Betriebsstabilität.'
           ]
         },
         {
-          title: 'Network Operations Engineer - Systemüberwachung & Incident Support',
-          company: 'SGS Iran (Huawei Technologies Service Project), Teheran, Iran',
+          title: 'RAN Front Office Engineer - Huawei Technologies Serviceprojekt',
+          company: 'Angestellt bei SGS Iran für Huawei RAN-Projekte, Teheran, Iran',
           date: 'März 2013 - März 2015',
           bullets: [
-            'Überwachung von Systemzustand und Performance anhand von Alarmen und KPI-Trends zur frühzeitigen Erkennung von Problemen.',
-            'Unterstützung von Incident-Handling-Prozessen und betrieblichen Abläufen zur Sicherstellung der Systemstabilität.'
+            'Überwachte RAN-Systemzustand, Verfügbarkeit, Alarme und Verkehrsverhalten in einer NOC-ähnlichen Betriebsumgebung.',
+            'Erstellte tägliche und wöchentliche KPI-Berichte und führte First-Level-Troubleshooting für Access-, Mobility-, Capacity- und Service-Quality-Probleme durch.',
+            'Pflegte Schichtprotokolle, Incident Records und Betriebsabläufe zur Unterstützung einheitlicher Eskalations- und Troubleshooting-Prozesse.'
           ]
         }
       ]
@@ -336,25 +351,25 @@ export const translations = {
         {
           title: 'ML-basierte Link-Kapazitätsschätzung in 4G/5G-Netzen',
           year: '2024',
-          objective: 'Schätzung des Systemdurchsatzes anhand realer KPI-Daten und Identifikation wichtiger Einflussfaktoren auf die Kapazität in Wireless-Netzen.',
-          methods: 'Entwicklung von XGBoost- und Random-Forest-Modellen, Feature-Analyse und Einsatz von SHAP zur Interpretation des Durchsatzverhaltens.',
-          results: 'Erstellung eines datenbasierten Workflows für Netzwerkoptimierung und nachvollziehbare Priorisierung von Performance-Engpässen.',
+          objective: 'Unterstützung KPI-gestützter Optimierung durch Kapazitätsprognose und Durchsatzmodellierung anhand von Telekommunikationsdaten.',
+          methods: 'Python-basierte KPI-Analyse, Durchsatzmodellierung, Merkmalsanalyse, SHAP und Machine-Learning-Workflows für Telekommunikationsdaten.',
+          results: 'Entwicklung eines Analyseansatzes, der Netzwerk-KPIs mit Kapazitätstreibern und Performance-Degradationen verknüpft.',
           link: 'https://github.com/omidrahimirad'
         },
         {
           title: '5G-Testsystem - Cloud-native Simulationsumgebung',
           year: '2024',
-          objective: 'Aufbau einer reproduzierbaren 5G-Systemtestumgebung für die Validierung von cloud-nativen RAN- und Core-Komponenten.',
-          methods: 'Bereitstellung eines vollständigen Simulations-Stacks mit Kubernetes, Docker, Linux und O-RAN-Komponenten.',
-          results: 'Automatisierte Ausführung von Testszenarien sowie Analyse von Stabilität, Durchsatz und Latenzprofilen unter unterschiedlichen Lastbedingungen.',
+          objective: 'Systembewertung von 5G-Testumgebungen mit reproduzierbaren cloud-nativen Testabläufen.',
+          methods: 'Entwicklung und Analyse Kubernetes-/O-RAN-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung.',
+          results: 'KPI-basierte Durchsatz- und Latenzanalyse in Linux-basierten Testumgebungen.',
           link: 'https://github.com/omidrahimirad'
         },
         {
           title: 'HF-Materialcharakterisierung mit Machine Learning',
           year: '2025',
-          objective: 'Vorhersage dielektrischer Eigenschaften für RF/HF- und Mikrowellenanwendungen anhand experimenteller Messdaten.',
-          methods: 'Aufbereitung von Impedanzspektroskopie-Daten und Entwicklung von Machine-Learning- sowie Symbolic-Regression-Workflows.',
-          results: 'Unterstützung einer schnelleren HF-Materialbewertung durch Verknüpfung von Messmerkmalen mit Permittivitätsvorhersagen.',
+          objective: 'Charakterisierung der Permittivität für HF- und Mikrowellenanwendungen durch experimentelle Messung und KI-basierte Vorhersage.',
+          methods: 'HF-Messanalyse, KI-basierte Materialcharakterisierung und Machine-Learning-Workflows.',
+          results: 'Verknüpfung experimenteller HF-Messdaten mit KI-basierten Vorhersagemethoden für die Materialcharakterisierung.',
           link: null
         }
       ]
@@ -363,32 +378,61 @@ export const translations = {
       title: 'Kenntnisse',
       groups: [
         {
-          title: 'Wireless & Systeme',
+          title: 'Systemintegration & Validierung',
           items: [
-            '4G/5G-RAN-Integration & Optimierung',
-            'O-RAN-Architektur und cloud-native 5G-Testumgebungen',
-            'RF/HF-Messtechnik & Signalanalyse',
-            'KPI-basierte Analyse und Ursachenanalyse über RRC/NAS/MAC/PHY',
-            'Systemintegration, Schnittstellenprüfung und Konfigurationsvalidierung'
+            'End-to-End-Validierung',
+            'Konfigurationsprüfung und Post-Change-Validierung',
+            'Performance-Tests und Lasttests',
+            'Ursachenanalyse',
+            'RAN-Konfigurationsvalidierung in produktiven Netzumgebungen'
           ]
         },
         {
-          title: 'Programmierung & Datenanalyse',
+          title: 'Telekommunikation & 3GPP-Systeme',
+          items: [
+            'LTE, 5G NR und RAN-Architektur',
+            'Analyse der Protokollebenen RRC, NAS, MAC und PHY',
+            'RAN-Integration und OSS/NMS-Monitoring',
+            'KPI-basierte Fehleranalyse mit RSRP, SINR, BLER, Durchsatz, Latenz, Accessibility und Retainability'
+          ]
+        },
+        {
+          title: 'Software, Daten & Automatisierung',
           items: [
             'Python (pandas, scikit-learn, NumPy)',
             'SQL',
             'Power BI',
+            'Git und Linux',
             'Jupyter',
-            'SHAP-basierte Feature-Analyse'
+            'Python-basierte KPI-Analyse'
           ]
         },
         {
-          title: 'DevOps & Tools',
+          title: 'Automatisierung & SPS-Grundlagen',
+          items: [
+            'SPS-Grundlagen',
+            'Siemens TIA Portal',
+            'Steuerungslogik und Timer',
+            'Sensor-/Aktor-Konzepte',
+            'Automatisierung im Masterstudium'
+          ]
+        },
+        {
+          title: 'Cloud-native Testplattformen',
           items: [
             'Kubernetes, Docker, Linux',
-            'Git',
-            'Automatisierte Testabläufe',
-            'OSS/NMS-Alarmdiagnose'
+            'O-RAN-Komponenten',
+            'Linux-basierte Testumgebungen',
+            'Reproduzierbare Test-Workflows'
+          ]
+        },
+        {
+          title: 'KI/ML für Telekommunikation',
+          items: [
+            'Kapazitätsprognose',
+            'Durchsatzmodellierung',
+            'SHAP und Merkmalsanalyse',
+            'KPI-gestützte Optimierung'
           ]
         },
         {
@@ -428,11 +472,12 @@ export const translations = {
       items: [
         {
           title: 'M.Sc. Elektrotechnik & Informationstechnik (Automatisierungstechnik)',
-          school: 'Technische Hochschule Deggendorf (THD), Deutschland',
-          date: 'März 2023 - März 2026',
+          school: 'Hochschule Deggendorf (THD), Deutschland',
+          date: 'März 2023 - 2026',
           details: [
-            'Masterarbeit: Permittivitätscharakterisierung für RF/HF- und Mikrowellenanwendungen: experimentelle Messung und KI-basierte Vorhersage.',
-            'Schwerpunkte: Regelungstechnik, eingebettete Signalverarbeitung, Data Science für Ingenieure, cloud-native 5G-Systeme und HF-Messtechnik.'
+            'Masterarbeit: Charakterisierung der Permittivität für HF- und Mikrowellenanwendungen: experimentelle Messung und KI-basierte Vorhersage.',
+            'Akademische Forschungsarbeit mit Fokus auf HF-Messanalyse, KI-basierte Materialcharakterisierung und Systembewertung von 5G-Testumgebungen.',
+            'Entwicklung und Analyse Kubernetes-/O-RAN-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung sowie KPI-basierter Durchsatz- und Latenzanalyse.'
           ]
         },
         {
