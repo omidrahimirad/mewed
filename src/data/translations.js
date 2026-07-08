@@ -7,8 +7,8 @@ export const translations = {
   en: {
     meta: {
       lang: 'en',
-      title: 'Omid Rahimi - Systems Integration, Test & RF Performance Portfolio',
-      description: 'Portfolio of Omid Rahimi, an engineer with 9+ years of experience in systems integration, testing, RF performance analysis, KPI-driven diagnostics, configuration validation, and Linux/Python automation across 4G/5G RAN and cloud-native 5G test environments.'
+      title: 'Omid Rahimi - Wireless/RF Systems Engineer Portfolio',
+      description: 'Portfolio of Omid Rahimi, a Wireless/RF Systems Engineer with 9+ years of experience in 4G/5G RAN operations, system integration, configuration validation, KPI-driven troubleshooting, customer-facing technical coordination, R&D collaboration, and Linux/Python automation.'
     },
     common: {
       downloadCv: 'Download CV',
@@ -32,14 +32,14 @@ export const translations = {
       menuToggle: 'Toggle navigation menu'
     },
     hero: {
-      headline: 'Omid Rahimi – Systems Integration, Test & RF Performance Engineer',
-      subheadline: '4G/5G RAN · Cloud-Native Test Environments · KPI-Driven Diagnostics',
-      summary: 'Engineer with 9+ years of experience in systems integration, testing, and RF performance analysis across 4G/5G RAN and cloud-native 5G test environments. Strong background in KPI-driven diagnostics, reproducible test workflows, configuration validation, and automation using Linux/Python. Based in Germany with full-time work authorization, available at short notice, and open to relocation within Germany.',
+      headline: 'Omid Rahimi – Wireless/RF Systems Engineer',
+      subheadline: '4G/5G RAN · System Integration & Validation · KPI-Driven Troubleshooting',
+      summary: 'Wireless/RF Systems Engineer with 9+ years of experience in 4G/5G RAN operations, system integration, configuration validation and KPI-driven troubleshooting. Experienced in large-scale telecom maintenance projects, including validation of engineering change requests, customer-facing technical coordination and collaboration with R&D to maintain network stability, service quality and operational reliability. Based in Germany, available for full-time employment at short notice, and open to relocation within Germany.',
       targetLabel: 'Professional focus:',
       targetRoles: [
         'Systems Integration & Validation',
-        'Test & Validation',
-        'RF Performance Analysis',
+        'Wireless/RF Systems Engineering',
+        '4G/5G RAN Operations',
         'RAN Operations & Optimization'
       ],
       portraitAlt: 'Omid Rahimi profile portrait'
@@ -52,7 +52,7 @@ export const translations = {
           company: 'Contracted via FPR Co. / Delta Ertebatat Iranian for Huawei RAN projects, Tehran, Iran',
           date: 'July 2016 - March 2023',
           bullets: [
-            'Supported deployment, configuration, optimization, and troubleshooting of large-scale LTE and early 5G RAN infrastructure in live mobile network environments.',
+            'Handled deployment, configuration, optimization, and troubleshooting of large-scale LTE and early 5G RAN infrastructure in live mobile network environments.',
             'Performed KPI-based fault analysis using RSRP, SINR, BLER, throughput, latency, handover success rate, accessibility, and retainability.',
             'Conducted cross-layer root cause analysis across RRC, NAS, MAC, and PHY to link protocol behavior with RAN performance degradation.',
             'Executed 50+ live software upgrades and license activations, including change-window support, post-upgrade validation, and service-continuity checks.',
@@ -103,7 +103,7 @@ export const translations = {
           title: '5G Test System - Cloud-Native Simulation Environment',
           year: '2024',
           objective: 'Evaluate 5G test environments at system level using reproducible cloud-native test workflows.',
-          methods: 'Built and analyzed Kubernetes/O-RAN-based 5G test scenarios, including multi-user performance evaluation.',
+          methods: 'Built and analyzed Kubernetes-based 5G test scenarios, including multi-user performance evaluation.',
           results: 'Analyzed throughput and latency behavior using KPI-based evaluation in Linux-based test environments.',
           link: 'https://github.com/omidrahimirad'
         },
@@ -151,16 +151,6 @@ export const translations = {
           ]
         },
         {
-          title: 'Automation & PLC Fundamentals',
-          items: [
-            'PLC basics',
-            'Siemens TIA Portal',
-            'Control logic and timers',
-            'Sensor/actuator concepts',
-            'Automation coursework'
-          ]
-        },
-        {
           title: 'Cloud-Native & Test Platforms',
           items: [
             'Kubernetes, Docker, Linux',
@@ -192,7 +182,7 @@ export const translations = {
           items: [
             'Persian (native)',
             'English (C2)',
-            'German (B2/C1)'
+            'German (B2+)'
           ]
         }
       ]
@@ -214,17 +204,25 @@ export const translations = {
       title: 'Education',
       items: [
         {
-          title: 'M.Sc. Electrical Engineering & Information Technology (Automation)',
-          school: 'Deggendorf University of Applied Sciences (THD), Germany',
-          date: 'March 2023 - 2026',
+          title: 'Career-Coaching High Profiling',
+          school: 'INQUA-Institut, Berlin, Germany',
+          date: 'since April 2026',
           details: [
-            'Master thesis: Permittivity Characterization for RF and Microwave Applications: Experimental Measurement and AI-Based Prediction.',
-            'Academic and research work includes RF measurement analysis, AI-based material characterization, and system-level evaluation of 5G test environments.',
-            'Built and analyzed Kubernetes/O-RAN-based 5G test scenarios, including multi-user performance evaluation and KPI-based throughput/latency analysis.'
+            'Career coaching and high-profiling program focused on positioning, application strategy, and transition into the German labor market.'
           ]
         },
         {
-          title: 'B.Sc. Electrical Engineering (Electronics)',
+          title: 'Master of Science - Electrical Engineering and Information Technology (Automation)',
+          school: 'Deggendorf Institute of Technology (THD), Germany',
+          date: 'March 2023 - March 2026',
+          details: [
+            'Master thesis: Permittivity Characterization for RF and Microwave Applications: Experimental Measurement and AI-Based Prediction.',
+            'Academic and research work includes RF measurement analysis, AI-based material characterization, and system-level evaluation of 5G test environments.',
+            'Built and analyzed Kubernetes-based 5G test scenarios, including multi-user performance evaluation and KPI-based throughput/latency analysis.'
+          ]
+        },
+        {
+          title: 'Bachelor of Science - Electrical Engineering (Electronics)',
           school: 'Ferdowsi University of Mashhad, Iran',
           date: 'September 2008 - September 2012',
           details: [
@@ -263,8 +261,8 @@ export const translations = {
   de: {
     meta: {
       lang: 'de',
-      title: 'Omid Rahimi - Systemintegration, Test & HF-Performance',
-      description: 'Portfolio von Omid Rahimi, Ingenieur mit über 9 Jahren Erfahrung in Systemintegration, Test, HF-/Performance-Analyse, KPI-basierter Diagnostik, Konfigurationsvalidierung und Automatisierung mit Linux/Python in 4G/5G-RAN- und cloud-nativen 5G-Testumgebungen.'
+      title: 'Omid Rahimi - Wireless/RF Systems Engineer Portfolio',
+      description: 'Portfolio von Omid Rahimi, Wireless/RF Systems Engineer mit über 9 Jahren Erfahrung in 4G/5G-RAN-Betrieb, Systemintegration, Konfigurationsvalidierung, KPI-basierter Fehleranalyse, technischer Kundenabstimmung, R&D-Zusammenarbeit und Automatisierung mit Linux/Python.'
     },
     common: {
       downloadCv: 'Lebenslauf herunterladen',
@@ -288,14 +286,14 @@ export const translations = {
       menuToggle: 'Navigationsmenü öffnen oder schließen'
     },
     hero: {
-      headline: 'Omid Rahimi – Systemintegration, Test & HF-Performance',
-      subheadline: '4G/5G-RAN · Cloud-native Testumgebungen · KPI-basierte Diagnostik',
-      summary: 'Ingenieur mit über 9 Jahren Erfahrung in Systemintegration, Test und HF-/Performance-Analyse in 4G/5G-RAN- und cloud-nativen 5G-Testumgebungen. Fundierte Erfahrung in KPI-basierter Diagnostik, reproduzierbaren Testabläufen, Konfigurationsvalidierung und Automatisierung mit Linux/Python. Wohnhaft in Deutschland, Vollzeit arbeitserlaubt, kurzfristig verfügbar und umzugsbereit innerhalb Deutschlands.',
+      headline: 'Omid Rahimi – Wireless/RF Systems Engineer',
+      subheadline: '4G/5G-RAN · Systemintegration & Validierung · KPI-basierte Fehleranalyse',
+      summary: 'Wireless/RF Systems Engineer mit über 9 Jahren Erfahrung in 4G/5G-RAN-Betrieb, Systemintegration, Konfigurationsvalidierung und KPI-basierter Fehleranalyse. Erfahrung in groß angelegten Telekommunikations-Maintenance-Projekten, einschließlich Validierung technischer Change Requests, technischer Kundenabstimmung und Zusammenarbeit mit R&D zur Sicherstellung von Netzstabilität, Servicequalität und operativer Zuverlässigkeit. Wohnhaft in Deutschland, kurzfristig für eine Vollzeitbeschäftigung verfügbar und deutschlandweit umzugsbereit.',
       targetLabel: 'Fachlicher Fokus:',
       targetRoles: [
         'Systemintegration & Validierung',
-        'Test & Validierung',
-        'HF-/Performance-Analyse',
+        'Wireless/RF Systems Engineering',
+        '4G/5G-RAN-Betrieb',
         'RAN-Betrieb & Optimierung'
       ],
       portraitAlt: 'Profilfoto von Omid Rahimi'
@@ -308,7 +306,7 @@ export const translations = {
           company: 'Beauftragt über FPR Co. / Delta Ertebatat Iranian für Huawei RAN-Projekte, Teheran, Iran',
           date: 'Juli 2016 - März 2023',
           bullets: [
-            'Unterstützte Bereitstellung, Konfiguration, Optimierung und Fehlerbehebung großflächiger LTE- und früher 5G-RAN-Infrastrukturen in produktiven Mobilfunknetzen.',
+            'Wirkte an Bereitstellung, Konfiguration, Optimierung und Fehlerbehebung großflächiger LTE- und früher 5G-RAN-Infrastrukturen in produktiven Mobilfunknetzen.',
             'Führte KPI-basierte Fehleranalysen anhand von RSRP, SINR, BLER, Durchsatz, Latenz, Handover-Erfolgsrate, Accessibility und Retainability durch.',
             'Analysierte Ursachen von Performance-Degradationen schichtübergreifend über RRC, NAS, MAC und PHY.',
             'Führte mehr als 50 Live-Software-Upgrades und Lizenzaktivierungen durch, inklusive Change-Window-Unterstützung, Post-Upgrade-Validierung und Service-Continuity-Checks.',
@@ -360,7 +358,7 @@ export const translations = {
           title: '5G-Testsystem - Cloud-native Simulationsumgebung',
           year: '2024',
           objective: 'Systembewertung von 5G-Testumgebungen mit reproduzierbaren cloud-nativen Testabläufen.',
-          methods: 'Entwicklung und Analyse Kubernetes-/O-RAN-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung.',
+          methods: 'Entwicklung und Analyse Kubernetes-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung.',
           results: 'KPI-basierte Durchsatz- und Latenzanalyse in Linux-basierten Testumgebungen.',
           link: 'https://github.com/omidrahimirad'
         },
@@ -408,16 +406,6 @@ export const translations = {
           ]
         },
         {
-          title: 'Automatisierung & SPS-Grundlagen',
-          items: [
-            'SPS-Grundlagen',
-            'Siemens TIA Portal',
-            'Steuerungslogik und Timer',
-            'Sensor-/Aktor-Konzepte',
-            'Automatisierung im Masterstudium'
-          ]
-        },
-        {
           title: 'Cloud-native Testplattformen',
           items: [
             'Kubernetes, Docker, Linux',
@@ -449,7 +437,7 @@ export const translations = {
           items: [
             'Persisch (Muttersprache)',
             'Englisch (C2)',
-            'Deutsch (B2/C1)'
+            'Deutsch (B2+)'
           ]
         }
       ]
@@ -471,18 +459,26 @@ export const translations = {
       title: 'Ausbildung',
       items: [
         {
-          title: 'M.Sc. Elektrotechnik & Informationstechnik (Automatisierungstechnik)',
-          school: 'Hochschule Deggendorf (THD), Deutschland',
-          date: 'März 2023 - 2026',
+          title: 'Karriere-Coaching High Profiling',
+          school: 'INQUA-Institut, Berlin, Deutschland',
+          date: 'seit April 2026',
           details: [
-            'Masterarbeit: Charakterisierung der Permittivität für HF- und Mikrowellenanwendungen: experimentelle Messung und KI-basierte Vorhersage.',
-            'Akademische Forschungsarbeit mit Fokus auf HF-Messanalyse, KI-basierte Materialcharakterisierung und Systembewertung von 5G-Testumgebungen.',
-            'Entwicklung und Analyse Kubernetes-/O-RAN-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung sowie KPI-basierter Durchsatz- und Latenzanalyse.'
+            'Karriere-Coaching und High-Profiling-Programm mit Fokus auf Positionierung, Bewerbungsstrategie und Übergang in den deutschen Arbeitsmarkt.'
           ]
         },
         {
-          title: 'B.Sc. Elektrotechnik (Elektronik)',
-          school: 'Ferdowsi University of Mashhad, Iran',
+          title: 'Master of Science - Elektrotechnik und Informationstechnologie (Automatisierung)',
+          school: 'Technische Hochschule Deggendorf (THD), Deutschland',
+          date: 'März 2023 - März 2026',
+          details: [
+            'Masterarbeit: Charakterisierung der Permittivität für HF- und Mikrowellenanwendungen: experimentelle Messung und KI-basierte Vorhersage.',
+            'Akademische Forschungsarbeit mit Fokus auf HF-Messanalyse, KI-basierte Materialcharakterisierung und Systembewertung von 5G-Testumgebungen.',
+            'Entwicklung und Analyse Kubernetes-basierter 5G-Testszenarien, einschließlich Multi-User-Performance-Bewertung sowie KPI-basierter Durchsatz- und Latenzanalyse.'
+          ]
+        },
+        {
+          title: 'Bachelor of Science - Elektrotechnik (Elektronik)',
+          school: 'Ferdowsi-Universität Maschhad, Iran',
           date: 'September 2008 - September 2012',
           details: [
             'Bachelorarbeit: Analyse von CDMA-Codes: Maximal-, Gold- und Kasami-Sequenzen.',
