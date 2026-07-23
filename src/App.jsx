@@ -58,7 +58,7 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    const sectionIds = ["work", "experience", "capabilities", "contact"];
+    const sectionIds = ["experience", "work", "capabilities", "contact"];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -161,6 +161,46 @@ function App() {
           </div>
         </section>
 
+        <section className="section shell" id="experience">
+          <SectionHeading
+            label={t.experienceLabel}
+            title={t.experienceTitle}
+            intro={t.experienceIntro}
+          />
+
+          <ol className="experience-list">
+            {roles.map((item) => (
+              <li key={item.date}>
+                <article className="experience-entry">
+                  <time className="experience-period">{item.date}</time>
+                  <div className="experience-content">
+                    <h3>{item.role}</h3>
+                    <p className="experience-company">{item.organization}</p>
+                    <p>{item.scope}</p>
+                    <ul>
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet}>
+                          <Check size={16} aria-hidden="true" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              </li>
+            ))}
+          </ol>
+
+          <aside className="development-note">
+            <p className="development-label">{t.developmentLabel}</p>
+            <div>
+              <h3>{t.developmentTitle}</h3>
+              <p className="development-meta">{t.developmentMeta}</p>
+              <p>{t.developmentText}</p>
+            </div>
+          </aside>
+        </section>
+
         <section className="section shell" id="work">
           <SectionHeading label={t.workLabel} title={t.workTitle} intro={t.workIntro} />
 
@@ -215,46 +255,6 @@ function App() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="section shell" id="experience">
-          <SectionHeading
-            label={t.experienceLabel}
-            title={t.experienceTitle}
-            intro={t.experienceIntro}
-          />
-
-          <ol className="experience-list">
-            {roles.map((item) => (
-              <li key={item.date}>
-                <article className="experience-entry">
-                  <time className="experience-period">{item.date}</time>
-                  <div className="experience-content">
-                    <h3>{item.role}</h3>
-                    <p className="experience-company">{item.organization}</p>
-                    <p>{item.scope}</p>
-                    <ul>
-                      {item.bullets.map((bullet) => (
-                        <li key={bullet}>
-                          <Check size={16} aria-hidden="true" />
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              </li>
-            ))}
-          </ol>
-
-          <aside className="development-note">
-            <p className="development-label">{t.developmentLabel}</p>
-            <div>
-              <h3>{t.developmentTitle}</h3>
-              <p className="development-meta">{t.developmentMeta}</p>
-              <p>{t.developmentText}</p>
-            </div>
-          </aside>
         </section>
 
         <section className="section shell" id="capabilities">

@@ -143,7 +143,7 @@ The shell remains 80rem with fluid gutters. The hero uses an asymmetric text-and
 
 Projects retain their factual reading order but pair each index rail with a content-specific schematic. Experience follows a vertical signal path with numbered nodes. Capabilities use a three-stage connected matrix. The contact section becomes a full-width deep technical band with an elevated paper form.
 
-Spacing follows 4, 8, 12, 16, 24, 32, 48, 64, 96, and 128px steps. Section padding is fluid from 80–112px. Breakpoints remain 70rem for navigation, 52rem for single-column composition, and 36rem for compact mobile treatment.
+Spacing follows 4, 8, 12, 16, 24, 32, 48, 64, 96, and 128px steps. Section padding is fluid from 72–96px, while ruled cells keep at least 24px of text inset. Breakpoints remain 70rem for navigation, 52rem for single-column composition, and 36rem for compact mobile treatment.
 
 ## Elevation & Depth
 

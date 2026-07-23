@@ -607,7 +607,7 @@ main {
   display: grid;
   grid-template-columns: minmax(7rem, 0.42fr) 1fr;
   gap: var(--space-4);
-  padding-block: var(--space-4);
+  padding-block: var(--space-5);
   border-bottom: var(--line);
 }
 
@@ -665,7 +665,7 @@ main {
 
 .proof-item {
   min-width: 0;
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-6);
   border-left: 1px solid color-mix(in srgb, var(--color-on-signal) 32%, transparent);
 }
 
@@ -698,7 +698,7 @@ main {
 .section {
   position: relative;
   isolation: isolate;
-  padding-block: clamp(5rem, 8vw, 7rem);
+  padding-block: clamp(4.5rem, 7vw, 6rem);
   border-bottom: var(--line);
 }
 
@@ -797,6 +797,10 @@ main {
   background: color-mix(in srgb, var(--color-signal-soft) 78%, transparent);
 }
 
+.project-entry:last-child {
+  border-bottom: 0;
+}
+
 .project-index {
   display: inline-flex;
   align-items: center;
@@ -888,7 +892,6 @@ main {
 }
 
 .project-evidence > div:first-child {
-  padding-left: 0;
   border-left: 0;
 }
 
@@ -1134,7 +1137,6 @@ main {
 }
 
 .capability-group:first-child {
-  padding-left: 0;
   border-left: 0;
 }
 
@@ -1150,7 +1152,7 @@ main {
 }
 
 .capability-group li {
-  padding-block: var(--space-3);
+  padding-block: var(--space-4);
   border-top: var(--line);
   color: var(--color-muted);
   font-size: 0.92rem;
@@ -1165,7 +1167,7 @@ main {
 }
 
 .education-block {
-  margin-top: var(--space-9);
+  margin-top: var(--space-8);
 }
 
 .education-block > h3 {
@@ -1193,7 +1195,6 @@ main {
 }
 
 .education-entry:first-child {
-  padding-left: 0;
   border-left: 0;
 }
 
@@ -1257,6 +1258,8 @@ main {
   margin-top: var(--space-5);
   font-size: clamp(2.5rem, 5vw, 4.7rem);
   font-weight: 600;
+  hyphens: auto;
+  overflow-wrap: break-word;
   letter-spacing: -0.038em;
   line-height: 0.98;
 }
@@ -1278,6 +1281,7 @@ main {
   justify-content: space-between;
   gap: var(--space-4);
   min-height: 4rem;
+  padding: var(--space-3);
   border-bottom: 1px solid color-mix(in srgb, var(--color-on-deep) 24%, transparent);
   text-decoration: none;
 }
@@ -1495,7 +1499,7 @@ main {
   }
 
   .proof-item {
-    padding-inline: var(--space-4);
+    padding-inline: var(--space-5);
   }
 }
 
@@ -1600,7 +1604,7 @@ main {
   .project-evidence > div,
   .capability-group,
   .education-entry {
-    padding: var(--space-5) 0;
+    padding: var(--space-6) var(--space-5);
     border-top: var(--line);
     border-left: 0;
   }
@@ -1717,7 +1721,7 @@ main {
   }
 
   .project-entry {
-    padding-inline: var(--space-3);
+    padding-inline: var(--space-4);
   }
 
   .project-schematic {
@@ -1738,11 +1742,16 @@ main {
   }
 
   .experience-content {
-    padding-left: var(--space-4);
+    padding-left: var(--space-5);
   }
 
   .contact-form {
     padding: var(--space-5);
+  }
+
+  .contact-copy h2 {
+    max-width: 100%;
+    font-size: 2rem;
   }
 
   .form-grid {

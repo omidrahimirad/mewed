@@ -34,6 +34,19 @@ describe("portfolio delivery contract", () => {
     expect(data).toContain("/files/Omid_Rahimi_Lebenslauf_DE.pdf");
   });
 
+  it("prioritizes professional experience before selected projects", () => {
+    expect(app.indexOf('id="experience"')).toBeLessThan(app.indexOf('id="work"'));
+    expect(app).toContain(
+      'const sectionIds = ["experience", "work", "capabilities", "contact"]',
+    );
+    expect(data.indexOf('["experience", "Experience"]')).toBeLessThan(
+      data.indexOf('["work", "Projects"]'),
+    );
+    expect(data.indexOf('["experience", "Erfahrung"]')).toBeLessThan(
+      data.indexOf('["work", "Projekte"]'),
+    );
+  });
+
   it("includes desktop, tablet, mobile, and reduced-motion behavior", () => {
     expect(css).toContain("@media (max-width: 52rem)");
     expect(css).toContain("@media (max-width: 36rem)");

@@ -237,8 +237,8 @@ export const content = {
     homeLabel: "Omid Rahimi — home",
     navLabel: "Primary navigation",
     nav: [
-      ["work", "Projects"],
       ["experience", "Experience"],
+      ["work", "Projects"],
       ["capabilities", "Capabilities"],
       ["contact", "Contact"],
     ],
@@ -369,8 +369,8 @@ export const content = {
     homeLabel: "Omid Rahimi — Startseite",
     navLabel: "Hauptnavigation",
     nav: [
-      ["work", "Projekte"],
       ["experience", "Erfahrung"],
+      ["work", "Projekte"],
       ["capabilities", "Kompetenzen"],
       ["contact", "Kontakt"],
     ],
