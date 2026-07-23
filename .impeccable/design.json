@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T15:30:00+02:00",
+  "title": "Design System: Omid Rahimi Engineering Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Field Signal",
+        "canonical": "#1f6a46",
+        "tonalRamp": ["#082016", "#103623", "#174f36", "#1f6a46", "#3d8b63", "#70ad89", "#a9d1b8", "#e0f0e6"]
+      },
+      "signal-strong": {
+        "role": "primary",
+        "displayName": "Deep Field Signal",
+        "canonical": "#174f36",
+        "tonalRamp": ["#071b11", "#0c2b1c", "#123d2a", "#174f36", "#2e7353", "#609779", "#9cc2ac", "#dcece3"]
+      },
+      "mineral-canvas": {
+        "role": "neutral",
+        "displayName": "Mineral Canvas",
+        "canonical": "#f3f4ef",
+        "tonalRamp": ["#20211e", "#3c3e39", "#5b5d56", "#797c73", "#999c92", "#b9bcb3", "#d9dbd4", "#f3f4ef"]
+      },
+      "technical-ink": {
+        "role": "neutral",
+        "displayName": "Technical Ink",
+        "canonical": "#14211b",
+        "tonalRamp": ["#0a100d", "#14211b", "#263b31", "#41594d", "#60786b", "#84988d", "#afbeb6", "#e7ece9"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Engineering Display",
+        "purpose": "The professional role in the hero only."
+      },
+      "headline": {
+        "displayName": "Section Argument",
+        "purpose": "Recruiter-facing section headlines."
+      },
+      "body": {
+        "displayName": "Technical Narrative",
+        "purpose": "Experience, project, and supporting copy."
+      },
+      "label": {
+        "displayName": "Recorded Metadata",
+        "purpose": "Dates, indices, evidence terms, and section labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-standard",
+        "value": "160ms ease",
+        "purpose": "Hover, focus, and color-state feedback."
+      },
+      {
+        "name": "menu-open",
+        "value": "220ms ease",
+        "purpose": "Mobile navigation panel only."
+      }
+    ],
+    "breakpoints": [
+      { "name": "navigation-compression", "value": "70rem" },
+      { "name": "tablet", "value": "52rem" },
+      { "name": "mobile", "value": "36rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary CV or submit action.",
+      "html": "<button class=\"ds-button-primary\">Download CV</button>",
+      "css": ".ds-button-primary{min-height:52px;padding:.8rem 1.15rem;border:1px solid var(--color-signal-strong,#174f36);border-radius:0;background:var(--color-signal-strong,#174f36);color:var(--color-on-signal,#fff);font:700 .86rem Manrope,system-ui,sans-serif;letter-spacing:.02em;transition:background-color 160ms ease,color 160ms ease}.ds-button-primary:hover{background:var(--color-ink,#14211b)}.ds-button-primary:focus-visible{outline:3px solid var(--color-focus,#d87927);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A direct secondary action without visual inflation.",
+      "html": "<button class=\"ds-button-secondary\">Discuss a role</button>",
+      "css": ".ds-button-secondary{min-height:52px;padding:.8rem 1.15rem;border:1px solid var(--color-ink,#14211b);border-radius:0;background:transparent;color:var(--color-ink,#14211b);font:700 .86rem Manrope,system-ui,sans-serif;letter-spacing:.02em;transition:background-color 160ms ease,color 160ms ease}.ds-button-secondary:hover{background:var(--color-ink,#14211b);color:var(--color-canvas,#f3f4ef)}.ds-button-secondary:focus-visible{outline:3px solid var(--color-focus,#d87927);outline-offset:3px}"
+    },
+    {
+      "name": "Ruled Text Field",
+      "kind": "input",
+      "description": "The default form field with visible label and bottom-rule focus.",
+      "html": "<label class=\"ds-field\"><span>Name *</span><input placeholder=\"Your name\"></label>",
+      "css": ".ds-field{display:grid;gap:8px;color:var(--color-muted,#59665f);font:400 .72rem 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}.ds-field input{min-height:52px;padding:.8rem 0;border:0;border-bottom:1px solid var(--color-rule,#c9d0ca);border-radius:0;background:transparent;color:var(--color-ink,#14211b);font:400 1rem Manrope,system-ui,sans-serif}.ds-field input:focus{outline:3px solid var(--color-focus,#d87927);outline-offset:3px;border-bottom:2px solid var(--color-signal,#1f6a46)}"
+    },
+    {
+      "name": "Proof Ledger Item",
+      "kind": "custom",
+      "description": "A verified operating-scale figure and its engineering context.",
+      "html": "<dl class=\"ds-proof\"><div><dd>13,000+</dd><dt>RAN network elements</dt></div></dl>",
+      "css": ".ds-proof{margin:0;padding:32px 24px;background:var(--color-signal-strong,#174f36);color:var(--color-on-signal,#fff)}.ds-proof dd{margin:0;font:600 2.2rem/1 Manrope,system-ui,sans-serif;letter-spacing:-.035em}.ds-proof dt{margin-top:12px;font:400 .72rem/1.45 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;opacity:.84}"
+    },
+    {
+      "name": "Project Dossier",
+      "kind": "custom",
+      "description": "A flat project row that makes problem, method, and output explicit.",
+      "html": "<article class=\"ds-project\"><span>RF-01</span><div><h3>Drive-test RF coverage analyzer</h3><p>RF analysis with inspectable technical evidence.</p></div></article>",
+      "css": ".ds-project{display:grid;grid-template-columns:160px 1fr;gap:48px;padding:48px 0;border-top:1px solid var(--color-rule,#c9d0ca);border-bottom:1px solid var(--color-rule,#c9d0ca);background:linear-gradient(90deg,color-mix(in srgb,var(--color-signal,#1f6a46) 8%,transparent),transparent 72%)}.ds-project>span{color:var(--color-signal,#1f6a46);font:400 .72rem 'DM Mono',monospace;letter-spacing:.08em}.ds-project h3{margin:0;color:var(--color-ink,#14211b);font:600 2rem/1.15 Manrope,system-ui,sans-serif;letter-spacing:-.025em}.ds-project p{max-width:720px;margin:16px 0 0;color:var(--color-muted,#59665f);font:400 1rem/1.65 Manrope,system-ui,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Field Engineering Dossier",
+    "overview": "The portfolio behaves like a concise acceptance report: factual, ordered, and easy to verify. Mineral surfaces, technical ink, one controlled forest-green signal, and ruled divisions create a mature engineering world without imitating a dashboard or corporate brochure.\n\nThe atmosphere is precise and human. The portrait provides identity; operating scale, projects, and experience provide authority. Density is editorial rather than card-based, with generous section rhythm and compact evidence inside each section.",
+    "keyCharacteristics": [
+      "Evidence-first hierarchy",
+      "Flat ruled composition",
+      "Restrained forest-green signal",
+      "Editorial typography with technical metadata",
+      "Bilingual, recruiter-first scanning"
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "Green marks action, active state, or verified evidence; it is never scattered as decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Recorded Metadata Rule",
+        "body": "Monospace is reserved for information that behaves like a field, date, code, or label—never for paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Evidence Rule",
+        "body": "Information earns prominence through order, scale, and contrast—not floating cards or drop shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lead with role, production scope, and opportunity intent.",
+      "Do use rules and alignment to structure technical information.",
+      "Do keep body text near a 45rem reading measure.",
+      "Do preserve one clear primary action and visible keyboard focus.",
+      "Do test German wrapping at every responsive width."
+    ],
+    "donts": [
+      "Don't introduce purple gradients, neon glows, or animated backgrounds.",
+      "Don't turn competencies into percentages, badges, or dashboard widgets.",
+      "Don't place cards inside cards or add shadows for routine grouping.",
+      "Don't fabricate project outcomes, customer proof, or metrics.",
+      "Don't use typewriter effects, stock imagery, or meaningless technical graphics."
+    ]
+  }
+}

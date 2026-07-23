@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  --canvas: #f3f4ef;
+  --surface: #ffffff;
+  --ink: #14211b;
+  --muted: #59665f;
+  --rule: #c9d0ca;
+  --signal: #174f36;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-synthesis: none;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0d1511;
+  --surface: #131e18;
+  --ink: #f1f4ef;
+  --muted: #aeb8b1;
+  --rule: #33433a;
+  --signal: #8ad8a9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+main {
+  width: min(calc(100% - 2rem), 52rem);
+  margin-inline: auto;
+  padding-block: clamp(4rem, 12vw, 9rem);
+}
+
+.page-mark {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.page-kicker {
+  margin: 3rem 0 0;
+  color: var(--signal);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 1rem 0 2.5rem;
+  font-size: clamp(2.75rem, 9vw, 5.75rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.content {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.content p + p {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+strong {
+  color: var(--ink);
+}
+
+a {
+  color: var(--signal);
+  font-weight: 700;
+  text-underline-offset: 0.24em;
+}
+
+a:focus-visible {
+  outline: 3px solid #d87927;
+  outline-offset: 3px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 2rem;
+}

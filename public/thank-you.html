@@ -4,12 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thank you - Omid Rahimi</title>
+    <link rel="stylesheet" href="/static-page.css" />
+    <script>
+      try {
+        const theme = localStorage.getItem("theme")
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme
+      } catch {}
+    </script>
   </head>
-  <body style="font-family: system-ui; padding: 2rem;">
+  <body>
     <main>
+      <span class="page-mark" aria-hidden="true">OR</span>
+      <p class="page-kicker">Omid Rahimi</p>
       <h1 data-i18n="title">Thanks for your message!</h1>
+      <div class="content">
       <p data-i18n="message">I’ll get back to you soon.</p>
-      <p><a href="/" data-i18n="back">Back to portfolio</a></p>
+      </div>
+      <a class="back-link" href="/" data-i18n="back">Back to portfolio</a>
     </main>
     <script>
       const content = {
@@ -29,7 +40,11 @@
         }
       }
 
-      const language = content[localStorage.getItem('language')] ? localStorage.getItem('language') : 'en'
+      let storedLanguage
+      try {
+        storedLanguage = localStorage.getItem('language')
+      } catch {}
+      const language = content[storedLanguage] ? storedLanguage : 'en'
       document.documentElement.lang = content[language].lang
       document.title = content[language].documentTitle
       document.querySelectorAll('[data-i18n]').forEach((element) => {
