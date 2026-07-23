@@ -11,6 +11,10 @@ const data = readFileSync(
   new URL("../src/data/portfolio.js", import.meta.url),
   "utf8",
 );
+const visuals = readFileSync(
+  new URL("../src/components/TechnicalVisuals.jsx", import.meta.url),
+  "utf8",
+);
 const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
 describe("portfolio delivery contract", () => {
@@ -49,5 +53,14 @@ describe("portfolio delivery contract", () => {
     expect(data).not.toContain("O-RAN");
     expect(data).toContain("(in progress)");
     expect(data).toContain("(laufend)");
+  });
+
+  it("uses content-specific technical visuals without adding project claims", () => {
+    for (const code of ["RF-01", "SA-02", "RCA-03", "VAL-04", "LOG-05"]) {
+      expect(visuals).toContain(`"${code}"`);
+    }
+    expect(visuals).toContain("HeroSpectrum");
+    expect(css).toContain("--color-secondary: #d08a2e");
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)");
   });
 });

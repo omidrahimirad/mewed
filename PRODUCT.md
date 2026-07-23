@@ -42,7 +42,7 @@ The engineering context includes live 2G, 3G, 4G, and early 5G networks; Huawei 
 - Voice: precise, restrained, factual, technically literate, mature, confident, and human.
 - Avoid vague enthusiasm language, startup/SaaS conventions, student-portfolio framing, fake metrics, skill percentages, stock imagery, and decorative engineering graphics without informational value.
 - Preserve the professional portrait at `public/avatar.webp`.
-- Preserve the current green signal association, but use it with controlled contrast rather than neon spectacle.
+- Use the Spectrum Blueprint identity: spectral blue for engineering structure and restrained amber for inspection, outcome, and focus states.
 
 ## Evidence on Hand
 

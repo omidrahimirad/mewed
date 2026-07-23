@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Header } from "./components/Header";
 import { SectionHeading } from "./components/SectionHeading";
+import { HeroSpectrum, ProjectSchematic } from "./components/TechnicalVisuals";
 import { content, experience, links, projects } from "./data/portfolio";
 
 /*
@@ -53,7 +54,7 @@ function App() {
     localStorage.setItem("theme", theme);
 
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    themeColor?.setAttribute("content", theme === "dark" ? "#0d1511" : "#f3f4ef");
+    themeColor?.setAttribute("content", theme === "dark" ? "#07141d" : "#f2f6f7");
   }, [theme]);
 
   useEffect(() => {
@@ -94,54 +95,55 @@ function App() {
 
       <main id="main">
         <section className="hero" id="top" aria-labelledby="hero-title">
+          <HeroSpectrum />
           <div className="shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">
-              <MapPin size={16} aria-hidden="true" />
-              {t.availability}
-            </p>
-            <h1 id="hero-title">{t.role}</h1>
-            <p className="hero-statement">{t.heroTitle}</p>
-            <p className="hero-intro">{t.heroIntro}</p>
-            <p className="opportunity-line">{t.heroOpportunity}</p>
+            <div className="hero-copy">
+              <p className="eyebrow">
+                <MapPin size={16} aria-hidden="true" />
+                {t.availability}
+              </p>
+              <h1 id="hero-title">{t.role}</h1>
+              <p className="hero-statement">{t.heroTitle}</p>
+              <p className="hero-intro">{t.heroIntro}</p>
+              <p className="opportunity-line">{t.heroOpportunity}</p>
 
-            <div className="hero-actions">
-              <a
-                className="button button-primary"
-                href={links.cv[language]}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Download size={18} aria-hidden="true" />
-                {t.downloadCv}
-              </a>
-              <a className="button button-secondary" href={links.email}>
-                <Mail size={18} aria-hidden="true" />
-                {t.contactCta}
-              </a>
+              <div className="hero-actions">
+                <a
+                  className="button button-primary"
+                  href={links.cv[language]}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Download size={18} aria-hidden="true" />
+                  {t.downloadCv}
+                </a>
+                <a className="button button-secondary" href={links.email}>
+                  <Mail size={18} aria-hidden="true" />
+                  {t.contactCta}
+                </a>
+              </div>
             </div>
-          </div>
 
-          <aside className="hero-record" aria-label={t.profileLabel}>
-            <figure className="portrait">
-              <img
-                src="/avatar.webp"
-                width="900"
-                height="900"
-                alt="Omid Rahimi"
-                fetchPriority="high"
-              />
-              <figcaption className="sr-only">{t.profileLabel}</figcaption>
-            </figure>
-            <dl className="profile-ledger">
-              {t.profileRows.map(([label, value]) => (
-                <div className="profile-row" key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </aside>
+            <aside className="hero-record" aria-label={t.profileLabel}>
+              <figure className="portrait">
+                <img
+                  src="/avatar.webp"
+                  width="900"
+                  height="900"
+                  alt="Omid Rahimi"
+                  fetchPriority="high"
+                />
+                <figcaption className="sr-only">{t.profileLabel}</figcaption>
+              </figure>
+              <dl className="profile-ledger">
+                {t.profileRows.map(([label, value]) => (
+                  <div className="profile-row" key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </aside>
           </div>
         </section>
 
@@ -168,41 +170,47 @@ function App() {
                 className={project.featured ? "project-entry is-featured" : "project-entry"}
                 key={project.code}
               >
-                <p className="project-index">{project.code}</p>
+                <div className="project-marker">
+                  <p className="project-index">{project.code}</p>
+                  <ProjectSchematic code={project.code} />
+                </div>
                 <div>
-                <header>
-                  <div>
-                    <h3>{project.title}</h3>
-                    <p className="project-summary">{project.summary}</p>
-                  </div>
-                </header>
-
-                <dl className="project-evidence">
-                  {[project.problem, project.method, project.output].map((value, index) => (
-                    <div key={t.fieldLabels[index]}>
-                      <dt>{t.fieldLabels[index]}</dt>
-                      <dd>{value}</dd>
+                  <header>
+                    <div>
+                      <h3>{project.title}</h3>
+                      <p className="project-summary">{project.summary}</p>
                     </div>
-                  ))}
-                </dl>
+                  </header>
 
-                <footer className="project-footer">
-                  <ul className="tag-list" aria-label={`${project.title}: ${t.technologiesLabel}`}>
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
+                  <dl className="project-evidence">
+                    {[project.problem, project.method, project.output].map((value, index) => (
+                      <div key={t.fieldLabels[index]}>
+                        <dt>{t.fieldLabels[index]}</dt>
+                        <dd>{value}</dd>
+                      </div>
                     ))}
-                  </ul>
-                  <a
-                    className="text-link"
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${t.repoLabel}: ${project.title}`}
-                  >
-                    {t.repoLabel}
-                    <ArrowUpRight size={16} aria-hidden="true" />
-                  </a>
-                </footer>
+                  </dl>
+
+                  <footer className="project-footer">
+                    <ul
+                      className="tag-list"
+                      aria-label={`${project.title}: ${t.technologiesLabel}`}
+                    >
+                      {project.tags.map((tag) => (
+                        <li key={tag}>{tag}</li>
+                      ))}
+                    </ul>
+                    <a
+                      className="text-link"
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${t.repoLabel}: ${project.title}`}
+                    >
+                      {t.repoLabel}
+                      <ArrowUpRight size={16} aria-hidden="true" />
+                    </a>
+                  </footer>
                 </div>
               </article>
             ))}

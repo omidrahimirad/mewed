@@ -1,24 +1,24 @@
 ---
 name: Omid Rahimi Engineering Portfolio
-description: A restrained field-engineering dossier for verified telecommunications experience.
+description: A spectrum-blue technical editorial system for verified telecommunications experience.
 colors:
-  signal: "#1f6a46"
-  signal-strong: "#174f36"
-  mineral-canvas: "#f3f4ef"
+  spectral-blue: "#075985"
+  spectral-blue-deep: "#06466b"
+  field-amber: "#d08a2e"
+  mineral-canvas: "#f2f6f7"
   paper-surface: "#ffffff"
-  soft-surface: "#e9ece7"
-  technical-ink: "#14211b"
-  muted-ink: "#59665f"
-  rule: "#c9d0ca"
-  dark-canvas: "#0d1511"
-  dark-surface: "#131e18"
-  dark-soft-surface: "#1b2821"
-  dark-ink: "#f1f4ef"
-  dark-muted-ink: "#aeb8b1"
-  dark-rule: "#33433a"
-  dark-signal: "#8ad8a9"
-  dark-signal-strong: "#b6efc9"
-  focus: "#d87927"
+  ice-surface: "#e5eef1"
+  alternate-surface: "#eaf2f4"
+  technical-ink: "#102a3a"
+  muted-ink: "#536875"
+  rule: "#b9cbd2"
+  night-canvas: "#07141d"
+  night-surface: "#0c1e2a"
+  night-ink: "#edf7fa"
+  night-muted-ink: "#a8bdc7"
+  night-rule: "#274555"
+  night-signal: "#55b9e8"
+  night-amber: "#e3a94d"
 typography:
   display:
     fontFamily: "Manrope, system-ui, sans-serif"
@@ -58,7 +58,7 @@ spacing:
   10: "128px"
 components:
   button-primary:
-    backgroundColor: "{colors.signal-strong}"
+    backgroundColor: "{colors.spectral-blue-deep}"
     textColor: "{colors.paper-surface}"
     rounded: "{rounded.square}"
     padding: "0.8rem 1.15rem"
@@ -75,41 +75,47 @@ components:
 
 ## Overview
 
-**Creative North Star: "Field Engineering Dossier"**
+**Creative North Star: "Spectrum Blueprint"**
 
-The portfolio behaves like a concise acceptance report: factual, ordered, and easy to verify. Mineral surfaces, technical ink, one controlled forest-green signal, and ruled divisions create a mature engineering world without imitating a dashboard or corporate brochure.
+The portfolio combines the clarity of a field-engineering acceptance report with the visual language of RF spectrum analysis. A signal trace, frequency grids, network nodes, protocol paths, and validation gates create an unmistakable telecommunications identity while every visual remains tied to real project subject matter.
 
-The atmosphere is precise and human. The portrait provides identity; operating scale, projects, and experience provide authority. Density is editorial rather than card-based, with generous section rhythm and compact evidence inside each section.
+The system is editorial rather than dashboard-like. Strong spectral blue establishes authority, restrained amber identifies outcomes and inspection points, and a lighter spectral blue preserves the signal identity in dark mode. Alternating mineral, ice, and deep-navy bands vary the scroll rhythm without turning information into floating cards.
 
 **Key Characteristics:**
 
-- Evidence-first hierarchy
-- Flat ruled composition
-- Restrained forest-green signal
-- Editorial typography with technical metadata
-- Bilingual, recruiter-first scanning
+- Spectrum-led RF identity
+- Evidence-first editorial hierarchy
+- Deep blue with restrained amber instrumentation
+- Project-specific technical schematics
+- Signal-path timelines and connected matrices
+- Purpose-designed light and dark modes
 
 ## Colors
 
-The palette combines mineral paper and dark technical ink with a single forest-green signal, then mirrors those roles in a low-light theme.
+The palette is derived from spectrum displays, infrastructure blueprints, and field-inspection markings.
 
 ### Primary
 
-- **Field Signal** (`#1f6a46`): labels, links, active navigation, icons, and limited emphasis.
-- **Deep Field Signal** (`#174f36`): primary actions and the verified-scale band in light mode.
+- **Spectral Blue** (`#075985`): active navigation, identifiers, signal traces, section rails, and technical links.
+- **Deep Spectral Blue** (`#06466b`): primary actions and verified-scale surfaces.
+
+### Secondary
+
+- **Field Amber** (`#d08a2e`): outcomes, inspection points, focus rings, selected rules, and diagram secondary paths.
 
 ### Neutral
 
-- **Mineral Canvas** (`#f3f4ef`): default page background.
-- **Paper Surface** (`#ffffff`): portrait ledger, form, and contained information surfaces.
-- **Soft Surface** (`#e9ece7`): secondary tonal separation.
-- **Technical Ink** (`#14211b`): headings, body emphasis, and dark footer.
-- **Muted Ink** (`#59665f`): supporting copy and metadata.
-- **Rule** (`#c9d0ca`): structural borders and dividers.
-- **Night Canvas / Surface** (`#0d1511` / `#131e18`): dark-mode foundations.
-- **Night Ink / Muted Ink** (`#f1f4ef` / `#aeb8b1`): dark-mode text.
+- **Mineral Canvas** (`#f2f6f7`): default light background.
+- **Paper Surface** (`#ffffff`): profile, matrix, form, and evidence surfaces.
+- **Ice Surface** (`#e5eef1`): secondary separation.
+- **Alternate Surface** (`#eaf2f4`): experience and project rhythm.
+- **Technical Ink** (`#102a3a`): primary light-mode text.
+- **Muted Ink** (`#536875`): supporting copy.
+- **Rule** (`#b9cbd2`): structural divisions.
+- **Night Canvas / Surface** (`#07141d` / `#0c1e2a`): authored dark-mode foundations.
+- **Night Ink / Muted Ink** (`#edf7fa` / `#a8bdc7`): dark-mode text.
 
-**The One Signal Rule.** Green marks action, active state, or verified evidence; it is never scattered as decoration.
+**The Instrument Color Rule.** Blue carries system structure; amber marks inspection, result, or focus. Neither color is used as filler decoration.
 
 ## Typography
 
@@ -119,83 +125,93 @@ The palette combines mineral paper and dark technical ink with a single forest-g
 
 **Label/Mono Font:** DM Mono (monospace fallback)
 
-**Character:** Manrope provides direct, contemporary engineering clarity. DM Mono makes dates, indices, and evidence labels feel recorded rather than advertised.
+**Character:** Manrope remains readable and mature at recruiter speed. DM Mono behaves like measurement notation for dates, project codes, signal labels, and technical annotations.
 
 ### Hierarchy
 
-- **Display** (600, `clamp(3.4rem, 6.2vw, 5.8rem)`, 0.94): the professional role only.
-- **Headline** (600, `clamp(2.3rem, 5vw, 4.5rem)`, 1): major section arguments.
+- **Display** (600, `clamp(3.4rem, 6.2vw, 5.8rem)`, 0.94): professional role only.
+- **Headline** (600, `clamp(2.3rem, 5vw, 4.5rem)`, 1): section arguments.
 - **Title** (600, fluid 1.45–2.55rem, 1.15–1.2): projects and roles.
-- **Body** (400, 1rem, 1.65): descriptive copy with a maximum reading measure of 45rem.
-- **Label** (400, 0.72rem, 0.08em, uppercase): dates, section labels, evidence terms, and project indices.
+- **Body** (400, 1rem, 1.65): technical narrative with a 45rem maximum measure.
+- **Label** (400, 0.72rem, 0.08em, uppercase): dates, identifiers, evidence terms, and annotations.
 
-**The Recorded Metadata Rule.** Monospace is reserved for information that behaves like a field, date, code, or label—never for paragraphs.
+**The Recorded Metadata Rule.** Monospace is restricted to information that behaves like a field, measurement, date, code, or protocol annotation.
 
 ## Layout
 
-The content shell is 80rem with fluid side gutters. Desktop uses asymmetric two-column compositions for the hero, section headings, experience rows, and contact area. Projects are full-width dossier rows with one index column and one evidence column; capability and education groups use shared ruled matrices rather than independent cards.
+The shell remains 80rem with fluid gutters. The hero uses an asymmetric text-and-profile composition over a spectrum field, with a clipped ice-blue signal zone behind the profile. Sections alternate between mineral, ice, white, and deep-navy surfaces.
 
-Spacing follows 4, 8, 12, 16, 24, 32, 48, 64, 96, and 128px steps. Sections use 128px vertical rhythm on large screens, 96px near tablet widths, and 76px on small screens. Breakpoints are 70rem for navigation compression, 52rem for tablet/single-column composition, and 36rem for compact mobile treatment. The implementation is explicitly verified at 375px, 768px, and 1440px without horizontal scrolling.
+Projects retain their factual reading order but pair each index rail with a content-specific schematic. Experience follows a vertical signal path with numbered nodes. Capabilities use a three-stage connected matrix. The contact section becomes a full-width deep technical band with an elevated paper form.
+
+Spacing follows 4, 8, 12, 16, 24, 32, 48, 64, 96, and 128px steps. Section padding is fluid from 80–112px. Breakpoints remain 70rem for navigation, 52rem for single-column composition, and 36rem for compact mobile treatment.
 
 ## Elevation & Depth
 
-The system is flat by default and uses no content shadows. Depth comes from tonal surfaces, borders, and controlled overlap in the fixed header. The header alone uses a translucent background and subtle backdrop blur so navigation remains readable while scrolling.
+Most structure remains flat and ruled. Depth is reserved for two decision surfaces: the professional profile and the contact form, which use soft downward shadows and an amber top edge. All other separation comes from surface contrast, signal rails, and shared rules.
 
-**The Flat Evidence Rule.** Information earns prominence through order, scale, and contrast—not floating cards or drop shadows.
+**The Selective Elevation Rule.** Only identity and action surfaces lift; evidence and technical structure stay grounded.
 
 ## Shapes
 
-Surfaces and controls are square. One-pixel rules create the recurring silhouette, while the portrait is clipped to a rectilinear frame. Circular badges, pill chips, and rounded card stacks do not belong to this system. Focus rings may sit outside the square form because accessibility state takes priority over visual restraint.
+The system stays rectilinear. Signal nodes use small circles only when they represent an actual point on a path. Project identifiers are square technical plates; controls and surfaces remain square. The profile’s clipped background plane provides directional geometry without introducing abstract blobs.
 
 ## Components
 
 ### Buttons
 
 - **Shape:** square, minimum height 52px.
-- **Primary:** deep field signal with white text in light mode; pale signal with dark text in dark mode.
-- **Hover / Focus:** shifts to technical ink and uses a 3px amber focus outline.
-- **Secondary:** transparent with a one-pixel technical-ink border; inverts on hover.
+- **Primary:** deep spectral blue in light mode and light spectrum blue in dark mode.
+- **Hover / Focus:** blue shift with a two-pixel lift; amber three-pixel focus outline.
+- **Secondary:** transparent, one-pixel border, and ice-blue hover surface.
 
 ### Cards / Containers
 
 - **Corner Style:** square.
-- **Background:** canvas by default; paper only for the profile ledger and form.
-- **Shadow Strategy:** none.
-- **Border:** shared one-pixel rules instead of isolated card outlines.
-- **Internal Padding:** 24–48px depending on viewport.
+- **Background:** surface role determined by section rhythm.
+- **Shadow Strategy:** profile and contact form only.
+- **Border:** technical rules; no nested card outlines.
+- **Internal Padding:** 24–48px.
 
 ### Inputs / Fields
 
-- **Style:** transparent field with a bottom rule, no rounded input shell.
-- **Focus:** bottom rule becomes a two-pixel field signal; global focus outline remains visible.
-- **Required State:** visible asterisk plus screen-reader text and native required semantics.
+- **Style:** transparent field with a ruled baseline.
+- **Focus:** spectral-blue baseline plus visible amber outline.
+- **Required State:** amber marker, native required semantics, and screen-reader text.
 
 ### Navigation
 
-The fixed header uses compact uppercase labels, a ruled language switch, theme control, and direct CV action. Active sections receive a two-pixel green underline. At 52rem and below, a full-width ruled panel replaces desktop navigation; it exposes expanded state, closes on selection or Escape, and keeps all controls at least 44px.
+The header carries a blue-to-amber calibration rail. Active links use spectral-blue text with an amber underline. The mobile panel preserves the same hierarchy, keyboard behavior, and minimum target sizing.
 
-### Proof Ledger
+### Hero Spectrum
 
-The proof ledger is the signature component: five verified figures on one deep-green band, divided by rules and labeled in DM Mono. At tablet and mobile widths it becomes a three- then two-column ledger without changing reading order.
+A lightweight SVG frequency grid and one-time spectrum trace sit behind the hero. The professional profile is tagged “RF / RAN / SYSTEMS” and elevated over an ice-blue clipped plane. Motion runs once and is disabled by reduced-motion preferences.
 
 ### Project Dossier
 
-Each project is a full-width ruled entry with an index, summary, and problem/method/output definition list. The first entry receives a faint tonal wash but no shadow or nested card.
+Each project keeps its problem, method, and output structure. The index rail adds a unique schematic derived from the project: coverage path, 5G topology, incident timeline, validation gates, or protocol ladder. Output labels use amber; system paths use blue.
+
+### Experience Signal Path
+
+Numbered blue nodes and a vertical rail connect engineering roles. Amber inspection points mark the transition into each responsibility block without suggesting fabricated status.
+
+### Capability Matrix
+
+Three connected nodes represent wireless systems, integration/validation, and software/platforms. The matrix becomes vertical on narrow screens while preserving the same reading order.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** lead with role, production scope, and opportunity intent.
-- **Do** use rules and alignment to structure technical information.
+- **Do** tie every diagram to the technical content beside it.
+- **Do** use blue for system structure and amber for outcomes or inspection.
+- **Do** alternate surfaces to create deliberate scroll rhythm.
 - **Do** keep body text near a 45rem reading measure.
-- **Do** preserve one clear primary action and visible keyboard focus.
-- **Do** test German wrapping at every responsive width.
+- **Do** preserve visible focus and reduced-motion behavior.
 
 ### Don't:
 
-- **Don't** introduce purple gradients, neon glows, or animated backgrounds.
-- **Don't** turn competencies into percentages, badges, or dashboard widgets.
-- **Don't** place cards inside cards or add shadows for routine grouping.
-- **Don't** fabricate project outcomes, customer proof, or metrics.
-- **Don't** use typewriter effects, stock imagery, or meaningless technical graphics.
+- **Don't** add decorative charts, fake telemetry, or invented values.
+- **Don't** introduce purple gradients, glassmorphism, or glowing dashboard effects.
+- **Don't** turn the spectrum motif into a constant animation.
+- **Don't** place cards inside cards or distribute shadows across routine content.
+- **Don't** use monospace for narrative text.
