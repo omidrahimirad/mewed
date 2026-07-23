@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T16:10:00+02:00",
+  "title": "Design System: Omid Rahimi Engineering Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "spectral-blue": {
+        "role": "primary",
+        "displayName": "Spectral Blue",
+        "canonical": "#075985",
+        "tonalRamp": ["#031824", "#043047", "#06466b", "#075985", "#177ca9", "#4da1c5", "#8fc9df", "#daf0f7"]
+      },
+      "field-amber": {
+        "role": "secondary",
+        "displayName": "Field Amber",
+        "canonical": "#d08a2e",
+        "tonalRamp": ["#2a1905", "#53330b", "#7d4e13", "#a86b1f", "#d08a2e", "#dfa95f", "#edcb98", "#faedd7"]
+      },
+      "mineral-canvas": {
+        "role": "neutral",
+        "displayName": "Mineral Canvas",
+        "canonical": "#f2f6f7",
+        "tonalRamp": ["#182024", "#303e43", "#4c5d63", "#697d84", "#899da4", "#aebfc4", "#d3dfe2", "#f2f6f7"]
+      },
+      "technical-ink": {
+        "role": "neutral",
+        "displayName": "Technical Ink",
+        "canonical": "#102a3a",
+        "tonalRamp": ["#07131b", "#102a3a", "#244659", "#426477", "#638493", "#89a5b0", "#b3c8cf", "#e8f0f2"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Engineering Display",
+        "purpose": "The professional role in the hero only."
+      },
+      "headline": {
+        "displayName": "Section Argument",
+        "purpose": "Recruiter-facing section headlines."
+      },
+      "body": {
+        "displayName": "Technical Narrative",
+        "purpose": "Experience, project, and supporting copy."
+      },
+      "label": {
+        "displayName": "Recorded Metadata",
+        "purpose": "Dates, identifiers, evidence terms, and technical annotations."
+      }
+    },
+    "shadows": [
+      {
+        "name": "identity-elevation",
+        "value": "0 1.5rem 4rem rgba(6, 53, 78, 0.16)",
+        "purpose": "Professional profile in light mode."
+      },
+      {
+        "name": "action-elevation",
+        "value": "0 1.5rem 4rem rgba(0, 0, 0, 0.22)",
+        "purpose": "Contact form on the deep technical band."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-standard",
+        "value": "160ms ease",
+        "purpose": "Hover, focus, and color-state feedback."
+      },
+      {
+        "name": "spectrum-reveal",
+        "value": "1.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "One-time hero signal-trace reveal."
+      },
+      {
+        "name": "menu-open",
+        "value": "220ms ease",
+        "purpose": "Mobile navigation panel only."
+      }
+    ],
+    "breakpoints": [
+      { "name": "navigation", "value": "70rem" },
+      { "name": "tablet", "value": "52rem" },
+      { "name": "mobile", "value": "36rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary CV or form action in the spectral-blue system.",
+      "html": "<button class=\"ds-button-primary\">Download CV</button>",
+      "css": ".ds-button-primary{min-height:52px;padding:.8rem 1.15rem;border:1px solid var(--color-signal-strong,#06466b);border-radius:0;background:var(--color-signal-strong,#06466b);color:var(--color-on-signal,#fff);font:700 .86rem Manrope,system-ui,sans-serif;transition:background-color 160ms ease,transform 160ms ease}.ds-button-primary:hover{background:var(--color-signal,#075985);transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid var(--color-focus,#d08a2e);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A direct secondary action with an ice-surface hover.",
+      "html": "<button class=\"ds-button-secondary\">Discuss a role</button>",
+      "css": ".ds-button-secondary{min-height:52px;padding:.8rem 1.15rem;border:1px solid var(--color-ink,#102a3a);border-radius:0;background:transparent;color:var(--color-ink,#102a3a);font:700 .86rem Manrope,system-ui,sans-serif;transition:background-color 160ms ease,border-color 160ms ease}.ds-button-secondary:hover{border-color:var(--color-signal,#075985);background:var(--color-signal-soft,#d8ecf3)}.ds-button-secondary:focus-visible{outline:3px solid var(--color-focus,#d08a2e);outline-offset:3px}"
+    },
+    {
+      "name": "Ruled Text Field",
+      "kind": "input",
+      "description": "The form field with a spectral-blue baseline and amber focus.",
+      "html": "<label class=\"ds-field\"><span>Name *</span><input placeholder=\"Your name\"></label>",
+      "css": ".ds-field{display:grid;gap:8px;color:var(--color-muted,#536875);font:400 .72rem 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}.ds-field input{min-height:52px;padding:.8rem 0;border:0;border-bottom:1px solid var(--color-rule,#b9cbd2);border-radius:0;background:transparent;color:var(--color-ink,#102a3a);font:400 1rem Manrope,system-ui,sans-serif}.ds-field input:focus{border-bottom:2px solid var(--color-signal,#075985)}.ds-field input:focus-visible{outline:3px solid var(--color-focus,#d08a2e);outline-offset:3px}"
+    },
+    {
+      "name": "Proof Ledger Item",
+      "kind": "custom",
+      "description": "Verified operating-scale evidence on a calibrated blue band.",
+      "html": "<dl class=\"ds-proof\"><div><dd>13,000+</dd><dt>RAN network elements</dt></div></dl>",
+      "css": ".ds-proof{margin:0;padding:32px 24px;background:var(--color-signal-strong,#06466b);color:var(--color-on-signal,#fff)}.ds-proof:before{display:block;width:28px;height:3px;margin-bottom:16px;background:var(--color-secondary,#d08a2e);content:''}.ds-proof dd{margin:0;font:600 2.2rem/1 Manrope,system-ui,sans-serif;letter-spacing:-.035em}.ds-proof dt{margin-top:12px;font:400 .72rem/1.45 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;opacity:.84}"
+    },
+    {
+      "name": "Project Dossier",
+      "kind": "custom",
+      "description": "A project row with identifier, signal schematic, and evidence hierarchy.",
+      "html": "<article class=\"ds-project\"><aside><span>RF-01</span><svg viewBox=\"0 0 144 80\" aria-hidden=\"true\"><path d=\"M12 52 C32 28 52 28 72 52 S112 76 132 52\"/><circle cx=\"12\" cy=\"52\" r=\"4\"/><circle cx=\"72\" cy=\"52\" r=\"4\"/><circle cx=\"132\" cy=\"52\" r=\"4\"/></svg></aside><div><h3>Drive-test RF coverage analyzer</h3><p>Problem, method, and output remain explicit.</p></div></article>",
+      "css": ".ds-project{display:grid;grid-template-columns:180px 1fr;gap:48px;padding:40px 24px;border-top:2px solid var(--color-signal,#075985);background:var(--color-signal-soft,#d8ecf3)}.ds-project aside>span{display:inline-flex;padding:8px 12px;background:var(--color-signal,#075985);color:#fff;font:400 .72rem 'DM Mono',monospace}.ds-project svg{display:block;width:150px;margin-top:20px;color:var(--color-signal,#075985)}.ds-project path,.ds-project circle{fill:none;stroke:currentColor;stroke-width:2}.ds-project h3{margin:0;color:var(--color-ink,#102a3a);font:600 2rem/1.15 Manrope,system-ui,sans-serif}.ds-project p{margin:16px 0 0;color:var(--color-muted,#536875);font:400 1rem/1.65 Manrope,system-ui,sans-serif}"
+    },
+    {
+      "name": "Experience Signal Node",
+      "kind": "custom",
+      "description": "A numbered role on the vertical engineering signal path.",
+      "html": "<div class=\"ds-experience\"><span>01</span><div><small>07/2016—03/2023</small><h3>Mobile RAN Engineer</h3></div></div>",
+      "css": ".ds-experience{display:grid;grid-template-columns:48px 1fr;gap:24px;align-items:start}.ds-experience>span{display:grid;width:36px;height:36px;place-items:center;background:var(--color-signal,#075985);color:#fff;font:400 .68rem 'DM Mono',monospace}.ds-experience small{color:var(--color-signal,#075985);font:400 .72rem 'DM Mono',monospace;letter-spacing:.08em}.ds-experience h3{margin:10px 0 0;color:var(--color-ink,#102a3a);font:600 2rem/1.2 Manrope,system-ui,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Spectrum Blueprint",
+    "overview": "The portfolio combines the clarity of a field-engineering acceptance report with the visual language of RF spectrum analysis. A signal trace, frequency grids, network nodes, protocol paths, and validation gates create an unmistakable telecommunications identity while every visual remains tied to real project subject matter.\n\nThe system is editorial rather than dashboard-like. Strong spectral blue establishes authority, restrained amber identifies outcomes and inspection points, and lighter spectral blue preserves the signal vocabulary in dark mode. Alternating mineral, ice, and deep-navy bands vary the scroll rhythm without turning information into floating cards.",
+    "keyCharacteristics": [
+      "Spectrum-led RF identity",
+      "Evidence-first editorial hierarchy",
+      "Deep blue with restrained amber instrumentation",
+      "Project-specific technical schematics",
+      "Signal-path timelines and connected matrices",
+      "Purpose-designed light and dark modes"
+    ],
+    "rules": [
+      {
+        "name": "The Instrument Color Rule",
+        "body": "Blue carries system structure; amber marks inspection, result, or focus. Neither color is used as filler decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Recorded Metadata Rule",
+        "body": "Monospace is restricted to information that behaves like a field, measurement, date, code, or protocol annotation.",
+        "section": "typography"
+      },
+      {
+        "name": "The Selective Elevation Rule",
+        "body": "Only identity and action surfaces lift; evidence and technical structure stay grounded.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do tie every diagram to the technical content beside it.",
+      "Do use blue for system structure and amber for outcomes or inspection.",
+      "Do alternate surfaces to create deliberate scroll rhythm.",
+      "Do keep body text near a 45rem reading measure.",
+      "Do preserve visible focus and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't add decorative charts, fake telemetry, or invented values.",
+      "Don't introduce purple gradients, glassmorphism, or glowing dashboard effects.",
+      "Don't turn the spectrum motif into a constant animation.",
+      "Don't place cards inside cards or distribute shadows across routine content.",
+      "Don't use monospace for narrative text."
+    ]
+  }
+}
